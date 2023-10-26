@@ -1,7 +1,13 @@
 {
-  "name": "nextjs",
+  "name": "param-hansa-philanthropies---www",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
+  "author": {
+    "name": "Arth K. Gajjar",
+    "email": "iarthstar@gmail.com",
+    "url": "https://github.com/iarthstar"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
