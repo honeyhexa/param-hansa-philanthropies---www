@@ -1,7 +1,10 @@
+import { FooterSection, HeroSection } from "@/ui";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center">
-      Param Hansa Philanthropies
+    <main className="flex flex-col items-center">
+      <HeroSection/>
+      <FooterSection />
     </main>
   )
 }
