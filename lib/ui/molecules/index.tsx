@@ -1,4 +1,23 @@
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable jsx-a11y/alt-text */
+import { cn } from "@/utils";
 import { Brand, Button, PageContainer, Text } from "@/ui";
+import Image from "next/image";
+
+export { AnimatedLines } from "./AnimatedLines";
+export { BigText } from "./BigText";
+
+export const HoverImage: React.FC<any> = ({ className, ...rest }) => (
+  <div className="overflow-hidden">
+    <Image
+      className={cn(
+        className,
+        "hover:scale-105 transition-all duration-500 ease-in-out"
+      )}
+      {...rest}
+    />
+  </div>
+);
 
 export const Header: React.FC = () => {
   return (
@@ -8,10 +27,17 @@ export const Header: React.FC = () => {
           <Brand className="w-8 md:w-12 lg:w-16" />
         </div>
         <div className="hidden lg:flex flex-row gap-4 items-center">
-          <Text className="px-3" size="3xl">Home</Text>
-          <Text className="px-3" size="3xl">Resources</Text>
+          <Text className="px-3" size="3xl">
+            Home
+          </Text>
+          <Text className="px-3" size="3xl">
+            Resources
+          </Text>
           <div className="flex items-start p-1 rounded-[0.875rem] border border-[#909090]/[.44] bg-[#ececec]/[.44]">
-            <Text size="3xl" className="px-6 py-1 rounded-xl bg-[#131316] text-white">
+            <Text
+              size="3xl"
+              className="px-6 py-1 rounded-xl bg-[#131316] text-white"
+            >
               IND
             </Text>
             <Text size="3xl" className="px-6 py-1 rounded-full text-[#1e1e21]">
@@ -90,7 +116,7 @@ export const Footer: React.FC = () => {
                 </div>
               </div>
               <div className="flex flex-col flex-shrink-0 items-start gap-4">
-              <Text size="3xl">Resources</Text>
+                <Text size="3xl">Resources</Text>
                 <div className="flex flex-col items-start gap-1 self-stretch">
                   <Text className="text-sm text-neutral-400" size="2xl">
                     Gallery
@@ -112,13 +138,13 @@ export const Footer: React.FC = () => {
               complimented by innovations in technology
             </Text>
             <div className="flex flex-row gap-4">
-            <Button variant="secondary">Contact&nbsp;us</Button>
-            <Button variant="secondary">us</Button>
-            <Button variant="secondary">us</Button>
-          </div>
+              <Button variant="secondary">Contact&nbsp;us</Button>
+              <Button variant="secondary">us</Button>
+              <Button variant="secondary">us</Button>
+            </div>
           </div>
         </div>
       </PageContainer>
     </footer>
   );
-}
+};

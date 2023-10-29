@@ -1,5 +1,6 @@
 import { cn, cva } from "@/utils";
 import { Element } from "@/ui";
+import { AnimatedLines } from "./molecules";
 
 const text = cva("text", {
   variants: {
@@ -45,9 +46,15 @@ const text = cva("text", {
   },
 });
 
-export const Text: React.FC<any> = ({ as = "p", size, className, ...rest }) => (
-  <Element as={as} className={cn(text({ size }), className)} {...rest} />
-);
+export const Text: React.FC<any> = ({ as = "p", size, animateLines = false, className, children, ...rest }) => {
+  let updatedChildren = children
+  if(animateLines) {
+    updatedChildren = <AnimatedLines text={children} />
+  }
+  return (
+    <Element as={as} className={cn(text({ size }), className)} {...rest}>{updatedChildren}</Element>
+  );
+}
 
 const button = cva("button", {
   variants: {
