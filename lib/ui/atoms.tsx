@@ -1,6 +1,6 @@
 import { cn, cva } from "@/utils";
 import { Element } from "@/ui";
-import { AnimatedLines } from "./molecules";
+import { AnimatedLines } from "@/ui";
 
 const text = cva("text", {
   variants: {

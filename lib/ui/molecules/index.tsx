@@ -3,6 +3,7 @@
 import { cn } from "@/utils";
 import { Brand, Button, PageContainer, Text } from "@/ui";
 import Image from "next/image";
+import Link from "next/link";
 
 export { AnimatedLines } from "./AnimatedLines";
 export { BigText } from "./BigText";
@@ -26,13 +27,17 @@ export const Header: React.FC = () => {
         <div className="flex items-center gap-3">
           <Brand className="w-8 md:w-12 lg:w-16" />
         </div>
-        <div className="hidden lg:flex flex-row gap-4 items-center">
+        <div className="hidden lg:flex flex-row gap-8 items-center">
+          <Link href="/">
           <Text className="px-3" size="3xl">
             Home
           </Text>
+          </Link>
+            <Link href="/resources">
           <Text className="px-3" size="3xl">
             Resources
           </Text>
+          </Link>
           <div className="flex items-start p-1 rounded-[0.875rem] border border-[#909090]/[.44] bg-[#ececec]/[.44]">
             <Text
               size="3xl"

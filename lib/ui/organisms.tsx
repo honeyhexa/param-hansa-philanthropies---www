@@ -1,12 +1,11 @@
 import { PageContainer, Text, ZStack } from "@/ui";
 import Image from "next/image";
-import { BigText } from "./molecules";
+import { BigText, HoverImage } from "@/ui";
 
 export const HeroSection: React.FC<any> = (props) => {
   return (
     <>
       <PageContainer className="p-8 lg:p-16">
-        {/* <Text size="7.5rem">Param Hansa<br /> Philanthropies</Text> */}
         <Text size="7.5rem">
           <BigText animateIntoView={false} text="Param Hansa" />
           <br />
@@ -35,7 +34,7 @@ export const FooterSection: React.FC<any> = (props) => {
   return (
     <PageContainer>
       <ZStack>
-        <Image
+        <HoverImage
           className="w-full h-[36rem] lg:h-fit object-cover"
           src="/footer.png"
           height="1440"
