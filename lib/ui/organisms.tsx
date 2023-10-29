@@ -5,8 +5,8 @@ export const HeroSection: React.FC<any> = (props) => {
   return (
     <>
       <PageContainer className="p-8 lg:p-16">
-        <Text className="text-[2rem] lg:text-[7.5rem] font-semibold tracking-tight leading-none">Param Hansa<br /> Philanthropies</Text>
-        <Text className="mt-4 lg:mt-8 text-base lg:text-4xl font-normal tracking-tight leading-none">Helping the new future.</Text>
+        <Text size="7.5rem">Param Hansa<br /> Philanthropies</Text>
+        <Text className="mt-4 lg:mt-8" size="4xl">Helping the new future.</Text>
       </PageContainer>
       <PageContainer>
         <Image className="w-full h-[36rem] lg:h-fit object-cover" src="/hero.png" height="1440" width="1920" alt="hero img" />
