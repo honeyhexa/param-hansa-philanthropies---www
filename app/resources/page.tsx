@@ -201,8 +201,8 @@ const Frontpage = () => (
             Mental health
           </div>
         </div>
-        <div className="unlocking_nature_s_secrets__biotechnology_in_conservation self-stretch text-[#1e1e21]  text-4xl font-semibold leading-[120%]">Unlocking Nature's Secrets: Biotechnology in Conservation</div>
-        <div className="opinion_and_advice_on_a_wide_range_of_topics__designed_to_inform__inspire__and_empower_your_journey_-2 self-stretch text-[#1e1e21]  text-2xl leading-[110%]">Opinion and advice on a wide range of topics, designed to inform, inspire, and empower your journey.</div>
+        <div className="unlocking_nature_s_secrets__biotechnology_in_conservation self-stretch text-[#1e1e21]  text-4xl font-semibold leading-[120%]">Unlocking Natures Secrets: Biotechnology in Conservation</div>
+        <div className=" self-stretch text-[#1e1e21]  text-2xl leading-[110%]">Opinion and advice on a wide range of topics, designed to inform, inspire, and empower your journey.</div>
         <div className="flex justify-center items-center gap-2.5 py-1 px-6 h-12 rounded-xl border border-[#c8c8c8] bg-white home-5 text-[#131316]  text-2xl leading-[120%]">
           Read story
         </div>
