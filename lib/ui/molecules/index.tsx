@@ -8,7 +8,7 @@ export { AnimatedLines } from "./AnimatedLines";
 export { BigText } from "./BigText";
 
 export const HoverImage: React.FC<any> = ({ className, ...rest }) => (
-  <div className="overflow-hidden">
+  <div className="overflow-hidden h-full">
     <Image
       className={cn(
         className,
@@ -56,7 +56,7 @@ export const Footer: React.FC = () => {
       <PageContainer className="">
         <div className="flex flex-col items-start gap-16 self-stretch p-8 lg:p-16 bg-black">
           <div className="flex flex-col md:flex-row items-start gap-8 self-stretch">
-            <div className="flex flex-col items-start gap-2.5 w-[403px]">
+            <div className="flex flex-col items-start gap-2.5">
               <div className="flex items-center gap-3">
                 <svg
                   width={65}
@@ -94,7 +94,7 @@ export const Footer: React.FC = () => {
                 </svg>
               </div>
             </div>
-            <div className="flex flex-col md:flex-row items-start gap-8 w-[800px]">
+            <div className="flex flex-col md:flex-row items-start gap-8">
               <div className="flex flex-col flex-shrink-0 items-start gap-4">
                 <Text size="3xl">Home</Text>
                 <div className="flex flex-col items-start gap-1 self-stretch">
