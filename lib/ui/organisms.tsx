@@ -1,6 +1,8 @@
 import { PageContainer, Text, ZStack } from "@/ui";
 import Image from "next/image";
 import { BigText, HoverImage } from "@/ui";
+import { PEOPLE } from "@/content/home";
+import Carousel from "./molecules/Swiper/Swiper";
 
 export const HeroSection: React.FC<any> = (props) => {
   return (
@@ -17,13 +19,13 @@ export const HeroSection: React.FC<any> = (props) => {
       </PageContainer>
       <PageContainer>
         <div className="overflow-hidden">
-        <Image
-          className="w-full h-[36rem] lg:h-fit object-cover hover:scale-105 transition-all duration-500 ease-in-out"
-          src="/hero.png"
-          height="1440"
-          width="1920"
-          alt="hero img"
-        />
+          <Image
+            className="w-full h-[36rem] lg:h-fit object-cover hover:scale-105 transition-all duration-500 ease-in-out"
+            src="/assets/hero.png"
+            height="1440"
+            width="1920"
+            alt="hero img"
+          />
         </div>
       </PageContainer>
     </>
@@ -32,11 +34,11 @@ export const HeroSection: React.FC<any> = (props) => {
 
 export const FooterSection: React.FC<any> = (props) => {
   return (
-    <PageContainer>
+    <PageContainer className="mt-16">
       <ZStack>
         <HoverImage
           className="w-full h-[36rem] lg:h-fit object-cover"
-          src="/footer.png"
+          src="/assets/footer.png"
           height="1440"
           width="1920"
           alt="hero img"

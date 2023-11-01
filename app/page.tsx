@@ -1,13 +1,17 @@
+import { CAREERS, PEOPLE, WE_DO } from "@/content/home";
 import { BigText, HoverImage } from "@/lib/ui/molecules";
 import { AnimatedLines } from "@/lib/ui/molecules/AnimatedLines";
+import { cn } from "@/utils";
 import { Button, FooterSection, HeroSection, PageContainer, Text } from "@/ui";
 import Image from "next/image";
+import Carousel from "@/lib/ui/molecules/Swiper/Swiper";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center">
       <HeroSection />
 
+      {/* SECTION TWO */}
       <PageContainer className="w-full grid grid-cols-1 lg:grid-cols-2">
         <div className="p-6 lg:p-16">
           <Text animateLines size="4xl">
@@ -26,22 +30,29 @@ export default function Home() {
         </div>
       </PageContainer>
 
+      {/* SECTION THREE */}
       <PageContainer className="w-full grid grid-cols-1 lg:grid-cols-10 py-6 lg:py-16 border-y">
-        <div className="col-span-6 h-96 md:h-[50rem]">
+        <div className="col-span-6 h-96 md:h-[72rem]">
           <HoverImage
             className="h-full w-full object-cover"
             width="1080"
             height="1080"
-            src="/hero.png"
+            src="/assets/section-one.png"
             alt=""
           />
         </div>
         <div className="col-span-4 p-6 lg:p-16">
-          <Text animateLines size="3xl">Mission</Text>
+          <Text animateLines size="3xl">
+            Mission
+          </Text>
           <Text animateLines size="6xl" className="mt-2">
             Foundation for change.
           </Text>
-          <Text animateLines size="4xl" className="mt-2 lg:mt-4">
+          <Text
+            animateLines
+            size="4xl"
+            className="text-neutral-500 mt-2 lg:mt-4"
+          >
             ParamHansa Philanthropies embodies a noble vision, focusing on
             uplifting and enriching the lives of individuals and societies in
             need, exemplifying the ideals of selflessness and empathy. It stands
@@ -52,85 +63,146 @@ export default function Home() {
         </div>
       </PageContainer>
 
+      {/* SECTION FOUR */}
       <PageContainer className="w-full grid grid-cols-1 lg:grid-cols-3">
-        <div className="p-6 lg:p-16">
-          <Text animateLines size="3xl">We</Text>
-          <Text animateLines size="6xl" className="mt-2">
-            Help
-          </Text>
-          <Text animateLines size="2xl" className="mt-2 lg:mt-4">
-            Committed to nurturing a generation of innovators, researchers, and
-            professionals who will contribute to a brighter future.
-          </Text>
-        </div>
-        <div className="p-6 lg:p-16 border-t lg:border-t-0 lg:border-l">
-          <Text animateLines size="3xl">We</Text>
-          <Text animateLines size="6xl" className="mt-2">
-            Help
-          </Text>
-          <Text animateLines size="2xl" className="mt-2 lg:mt-4">
-            Committed to nurturing a generation of innovators, researchers, and
-            professionals who will contribute to a brighter future.
-          </Text>
-        </div>
-        <div className="p-6 lg:p-16 border-t lg:border-t-0 lg:border-l">
-          <Text animateLines size="3xl">We</Text>
-          <Text animateLines size="6xl" className="mt-2">
-            Help
-          </Text>
-          <Text animateLines size="2xl" className="mt-2 lg:mt-4">
-            Committed to nurturing a generation of innovators, researchers, and
-            professionals who will contribute to a brighter future.
-          </Text>
-        </div>
+        {WE_DO.map((o, i) => (
+          <div
+            key={i}
+            className={cn("p-6 lg:p-16", {
+              "border-t lg:border-t-0 lg:border-l": i > 0,
+            })}
+          >
+            <Text animateLines size="3xl">
+              {o.label}
+            </Text>
+            <Text animateLines size="6xl" className="mt-2">
+              {o.title}
+            </Text>
+            <Text
+              animateLines
+              size="2xl"
+              className="text-neutral-500 mt-2 lg:mt-4"
+            >
+              {o.desc}
+            </Text>
+          </div>
+        ))}
       </PageContainer>
 
+      {/* SECTION FIVE */}
       <PageContainer className="w-full flex flex-col border-y">
         <div className="p-6 lg:p-16">
-          <Text animateLines size="3xl">Meet the</Text>
+          <Text animateLines size="3xl">
+            Meet the
+          </Text>
           <Text animateLines size="6xl" className="mt-2">
             People behind the curtain.
           </Text>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3">
-          {[1, 2, 3, 4, 5].map((o, i) => (
-            <div key={i} className="flex flex-col">
-              <HoverImage
-                className="h-96 object-cover"
-                width="720"
-                height="720"
-                src="/hero.png"
-                alt=""
-              />
-              <div className="flex flex-col p-6 lg:p-12 gap-2 lg:gap-4">
-                <Text animateLines size="5xl">Dheeraj Pandey</Text>
-                <Text animateLines size="2xl">
-                  Constant student of business & technology; beachcomber of
-                  people experiences; design worshipper. CeO of DevRev, Former
-                  CeO of Nutanix.
-                </Text>
+        <PageContainer className="block lg:hidden">
+          <Carousel>
+            {PEOPLE.map((o, i) => (
+              <div key={i} className="flex flex-col mb-16">
+                <HoverImage
+                  className="h-96 object-cover object-top"
+                  width="1080"
+                  height="1080"
+                  src={o.src}
+                  alt=""
+                />
+                <div className="flex flex-col p-6 lg:p-12 gap-2 lg:gap-4">
+                  <Text animateLines size="5xl">
+                    {o.name}
+                  </Text>
+                  <Text animateLines size="2xl" className="text-neutral-500">
+                    {o.desc}
+                  </Text>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </Carousel>
+        </PageContainer>
+        <PageContainer className="hidden lg:block">
+          <div className="grid grid-cols-1 lg:grid-cols-3">
+            {PEOPLE.map((o, i) => (
+              <div key={i} className="flex flex-col">
+                <HoverImage
+                  className="h-96 object-cover object-top"
+                  width="720"
+                  height="720"
+                  src={o.src}
+                  alt=""
+                />
+                <div className="flex flex-col p-6 lg:p-12 gap-2 lg:gap-4">
+                  <Text animateLines size="5xl">
+                    {o.name}
+                  </Text>
+                  <Text animateLines size="2xl" className="text-neutral-500">
+                    {o.desc}
+                  </Text>
+                </div>
+              </div>
+            ))}
+          </div>
+        </PageContainer>
       </PageContainer>
 
-      <PageContainer className="w-full grid grid-cols-1 lg:grid-cols-10 py-6 lg:py-16 border-y">
-        <div className="col-span-6 h-96 md:h-[50rem]">
+      {/* SECTION SIX */}
+      <PageContainer className="w-full grid grid-cols-1 lg:grid-cols-10 py-6 lg:py-16">
+        <div className="col-span-4 p-6 lg:p-16">
+          <Text animateLines size="3xl">
+            Mission
+          </Text>
+          <Text animateLines size="6xl" className="mt-2">
+            Foundation for change.
+          </Text>
+          <Text
+            animateLines
+            size="4xl"
+            className="text-neutral-500 mt-2 lg:mt-4"
+          >
+            ParamHansa Philanthropies embodies a noble vision, focusing on
+            uplifting and enriching the lives of individuals and societies in
+            need, exemplifying the ideals of selflessness and empathy. It stands
+            as a powerful force for good, demonstrating an unwavering dedication
+            to improving the well-being of humanity through its charitable
+            actions and initiatives.
+          </Text>
+        </div>
+        <div className="col-span-6 h-96 md:h-[72rem]">
           <HoverImage
             className="h-full w-full object-cover"
             width="1080"
             height="1080"
-            src="/hero.png"
+            src="/assets/section-three.png"
+            alt=""
+          />
+        </div>
+      </PageContainer>
+
+      {/* SECTION SEVEN */}
+      <PageContainer className="w-full grid grid-cols-1 lg:grid-cols-10 py-6 lg:py-16 border-y">
+        <div className="col-span-6 h-96 md:h-[72rem]">
+          <HoverImage
+            className="h-full w-full object-cover"
+            width="1080"
+            height="1080"
+            src="/assets/section-one.png"
             alt=""
           />
         </div>
         <div className="col-span-4 p-6 lg:p-16">
-          <Text animateLines size="3xl">Mission</Text>
+          <Text animateLines size="3xl">
+            Mission
+          </Text>
           <Text animateLines size="6xl" className="mt-2">
             Foundation for change.
           </Text>
-          <Text animateLines size="4xl" className="mt-2 lg:mt-4">
+          <Text
+            animateLines
+            size="4xl"
+            className="text-neutral-500 mt-2 lg:mt-4"
+          >
             ParamHansa Philanthropies embodies a noble vision, focusing on
             uplifting and enriching the lives of individuals and societies in
             need, exemplifying the ideals of selflessness and empathy. It stands
@@ -141,43 +213,43 @@ export default function Home() {
         </div>
       </PageContainer>
 
-      <PageContainer className="w-full grid grid-cols-1 lg:grid-cols-3">
-        <div className="flex flex-col items-stretch lg:items-start p-6 lg:p-16">
+      {/* SECTION EIGHT */}
+      <PageContainer className="w-full flex flex-col">
+        <div className="p-6 lg:p-16">
           <Text animateLines size="6xl" className="mt-2">
-            Help
+            Join us
           </Text>
-          <Text animateLines size="2xl" className="mt-2 lg:mt-4">
-            Committed to nurturing a generation of innovators, researchers, and
-            professionals who will contribute to a brighter future.
-          </Text>
-          <Button className="mt-4 lg:mt-8" variant="secondary">
-            <Text animateLines size="2xl">Contact us</Text>
-          </Button>
         </div>
-        <div className="flex flex-col items-stretch lg:items-start p-6 lg:p-16 border-t lg:border-t-0 lg:border-l">
-          <Text animateLines size="6xl" className="mt-2">
-            Help
-          </Text>
-          <Text animateLines size="2xl" className="mt-2 lg:mt-4">
-            Committed to nurturing a generation of innovators, researchers, and
-            professionals who will contribute to a brighter future.
-          </Text>
-          <Button className="mt-4 lg:mt-8" variant="secondary">
-            <Text size="2xl">Contact us</Text>
-          </Button>
-        </div>
-        <div className="flex flex-col items-stretch lg:items-start p-6 lg:p-16 border-t lg:border-t-0 lg:border-l">
-          <Text animateLines size="6xl" className="mt-2">
-            Help
-          </Text>
-          <Text animateLines size="2xl" className="mt-2 lg:mt-4">
-            Committed to nurturing a generation of innovators, researchers, and
-            professionals who will contribute to a brighter future.
-          </Text>
-          <Button className="mt-4 lg:mt-8" variant="secondary">
-            <Text size="2xl">Contact us</Text>
-          </Button>
-        </div>
+      </PageContainer>
+
+      <PageContainer className="w-full grid grid-cols-1 lg:grid-cols-3 border-y">
+        {CAREERS.map((o, i) => (
+          <div
+            key={i}
+            className={cn(
+              "flex flex-col items-stretch lg:items-start p-6 lg:p-16",
+              {
+                "border-t lg:border-t-0 lg:border-l": i > 0,
+              }
+            )}
+          >
+            <Text animateLines size="6xl" className="mt-2">
+              {o.title}
+            </Text>
+            <Text
+              animateLines
+              size="2xl"
+              className="text-neutral-500 mt-2 lg:mt-4"
+            >
+              {o.desc}
+            </Text>
+            <Button className="mt-4 lg:mt-8" variant="secondary">
+              <Text animateLines size="2xl">
+                {o.button.label}
+              </Text>
+            </Button>
+          </div>
+        ))}
       </PageContainer>
 
       <FooterSection />
