@@ -154,18 +154,4 @@ export const Footer: React.FC = () => {
   );
 };
 
-
-
-
-
-
-
-<div class="footer__marque">
-            <div class="footer__marque-text">
-                <span>Odin’s Crow&nbsp;–&nbsp;</span>
-                <span>Odin’s Crow&nbsp;–&nbsp;</span>
-                <span>Odin’s Crow&nbsp;–&nbsp;</span>
-            </div>
-        </div>
-
         
