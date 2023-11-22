@@ -18,7 +18,9 @@ export const BigText: FC<any> = ({
   intersectionRootMargin,
   withoutSrText,
   srText,
+  animate = false,
 }) => {
+
   const [animationsCleanUp, setAnimationsCleanUp] = useState(false);
   const chars = useMemo(() => text.split(""), [text]);
   const containerRef = useRef<HTMLSpanElement>(null);
@@ -28,7 +30,7 @@ export const BigText: FC<any> = ({
   };
 
   useEffect(() => {
-    if (!isStatic) {
+    if (!isStatic && animate) {
       initCharsAnimation({
         containerRef,
         staticReset,
@@ -41,6 +43,10 @@ export const BigText: FC<any> = ({
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  if(animate === false) {
+    return text;
+  }
 
   return (
     <span ref={containerRef} className={cn(styles.bigText, className)}>

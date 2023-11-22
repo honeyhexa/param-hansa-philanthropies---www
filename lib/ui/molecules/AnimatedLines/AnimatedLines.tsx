@@ -18,7 +18,9 @@ export const AnimatedLines: FC<AnimatedLinesProps> = ({
   intersectionRootMargin,
   elementType,
   noTextTransform,
+  animate = false,
 }) => {
+
   const [animationsCleanUp, setAnimationsCleanUp] = useState(false);
   const words = useMemo(() => text.split(" "), [text]);
   const [initialWords] = useState(words);
@@ -55,14 +57,17 @@ export const AnimatedLines: FC<AnimatedLinesProps> = ({
   }, [words]);
 
   useEffect(() => {
-    initLinesAnimation({
-      containerRef,
-      staticReset,
-      animationDelay,
-      animateIntoView,
-      intersectionThreshold,
-      intersectionRootMargin,
-    });
+    if(animate) {
+
+      initLinesAnimation({
+        containerRef,
+        staticReset,
+        animationDelay,
+        animateIntoView,
+        intersectionThreshold,
+        intersectionRootMargin,
+      });
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -90,6 +95,10 @@ export const AnimatedLines: FC<AnimatedLinesProps> = ({
         {wordsRender}
       </span>
     );
+  }
+
+  if(animate === false) {
+    return text;
   }
 
   return (

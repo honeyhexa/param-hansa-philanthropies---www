@@ -20,6 +20,7 @@ export type AnimatedLinesProps = {
   intersectionRootMargin?: string;
   elementType?: ElementType;
   noTextTransform?: boolean;
+  animate?: boolean;
 };
 
 type InitLinesAnimationProps = {

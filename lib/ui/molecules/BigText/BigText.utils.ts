@@ -12,7 +12,7 @@ export const initCharsAnimation = ({
 }: any) => {
   const containerEl = containerRef.current as HTMLSpanElement;
 
-  const mainChars = [...containerEl.children as any];
+  const mainChars = [...containerEl?.children as any];
   mainChars.shift();
   const targetEl = mainChars.pop() as HTMLSpanElement;
   const firstChar = mainChars[0] as HTMLSpanElement;

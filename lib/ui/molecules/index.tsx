@@ -13,7 +13,7 @@ export const HoverImage: React.FC<any> = ({ className, ...rest }) => (
     <Image
       className={cn(
         className,
-        "hover:scale-105 transition-all duration-500 ease-in-out"
+        ""
       )}
       {...rest}
     />
@@ -153,3 +153,19 @@ export const Footer: React.FC = () => {
     </footer>
   );
 };
+
+
+
+
+
+
+
+<div class="footer__marque">
+            <div class="footer__marque-text">
+                <span>Odin’s Crow&nbsp;–&nbsp;</span>
+                <span>Odin’s Crow&nbsp;–&nbsp;</span>
+                <span>Odin’s Crow&nbsp;–&nbsp;</span>
+            </div>
+        </div>
+
+        
