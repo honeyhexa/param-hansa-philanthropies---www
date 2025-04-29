@@ -56,8 +56,8 @@ export default async function ArticlePage(props: any) {
           </p>
         </div>
       </Section>
-      <Section>
-        <div className="w-full m-auto max-w-xl pb-32 bg-[#FAFAFA]">
+      <Section guides={false}>
+        <div className="w-full m-auto max-w-xl pb-32 bg-[#FAFAFA] border-x border-x-4 border-x-[#FAFAFA] ">
           <div
             className={`px-2 
           [&>h2]:py-12 [&>h2]:text-3xl [&>h2]:text-[#4A1A51] [&>h2]:font-schibsted [&>h2]:font-semibold [&>h2]:tracking-[-0.04em]

@@ -32,12 +32,12 @@ export default async function ArticlePage(props: any) {
         <div className="flex flex-col items-center">
           <div className="pt-40 mb-8 w-full m-auto max-w-xl flex flex-row items-center justify-start">
             <Link
-              href="/blog"
+              href="/work"
               className="dark:bg-transparent dark:text-[#4A1A51] bg-[#4A1A51] text-[#FAFAFA]"
               data-theme="dark"
             >
               <div className="group-hover:bg-[#4A1A51] group-hover:text-[#FAFAFA] flex flex-row items-center justify-between px-2 py-4 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
-                <ArrowLeft className="h-6 mr-2" /> Blog
+                <ArrowLeft className="h-6 mr-2" /> Work
               </div>
             </Link>
           </div>
@@ -56,10 +56,28 @@ export default async function ArticlePage(props: any) {
           </p>
         </div>
       </Section>
-      <Section>
-        <div className="w-full m-auto max-w-xl pb-32 bg-[#FAFAFA]">
+      <Section guides={false}>
+        <div className="w-full border-x border-x-zinc-500/20 border-b border-b-zinc-500/20 grid grid-cols-4 py-32 bg-[#FAFAFA]">
+          <div className="px-4 sticky top-44 h-20 col-span-2 text-5xl text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em]">Initiative and story forward</div>
           <div
-            className={`px-2 
+            className={`
+              col-span-2 pr-2 
+          [&>h2]:py-12 [&>h2]:text-3xl [&>h2]:text-[#4A1A51] [&>h2]:font-schibsted [&>h2]:font-semibold [&>h2]:tracking-[-0.04em]
+          [&>h3]:py-8 [&>h3]:text-xl [&>h3]:text-[#4A1A51] [&>h3]:font-schibsted [&>h3]:font-semibold [&>h3]:tracking-[-0.02em]
+          [&>p]:pb-0 [&>p]:text-lg [&>p]:text-[#4A1A51]/90 [&>p]:font-schibsted [&>p]:font-medium [&>p]:tracking-[-0.02em] [&>p]:leading-7
+          [&>ul]:list-disc [&>ul]:ml-5 [&>ul>li]:py-2 [&>ul>li]:text-lg [&>ul>li]:text-[#4A1A51]/90 [&>ul>li]:font-schibsted [&>ul>li]:font-medium [&>ul>li]:tracking-[-0.02em] [&>ul>li]:leading-7
+          `}
+          >
+            <BlockContent value={post.body} />
+          </div>
+        </div>
+      </Section>
+      <Section guides={false}>
+        <div className="w-full border-x border-x-zinc-500/20 border-b border-b-zinc-500/20 grid grid-cols-4 py-32 bg-[#FAFAFA]">
+          <div className="px-4 sticky top-44 h-20 col-span-2 text-5xl text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em]">Initiative and story forward</div>
+          <div
+            className={`
+              col-span-2 pr-4 
           [&>h2]:py-12 [&>h2]:text-3xl [&>h2]:text-[#4A1A51] [&>h2]:font-schibsted [&>h2]:font-semibold [&>h2]:tracking-[-0.04em]
           [&>h3]:py-8 [&>h3]:text-xl [&>h3]:text-[#4A1A51] [&>h3]:font-schibsted [&>h3]:font-semibold [&>h3]:tracking-[-0.02em]
           [&>p]:pb-0 [&>p]:text-lg [&>p]:text-[#4A1A51]/90 [&>p]:font-schibsted [&>p]:font-medium [&>p]:tracking-[-0.02em] [&>p]:leading-7

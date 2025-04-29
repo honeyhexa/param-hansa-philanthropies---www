@@ -9,6 +9,7 @@ import { COLLABS, STATS } from "@/content/work";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Work() {
   return (
@@ -84,10 +85,14 @@ export default function Work() {
           <thead></thead>
           <tbody className="pb-64">
             {COLLABS.map((o, i) => (
-              <tr
-                data-id={`card-${i}`}
+            <Link
+              data-id={`card-${i}`}
+              className=""
+              key={i}
+              href={`/work/why-do-we-do-what-we-do`}
+            >
+              <tr 
                 className="group grid grid-cols-8 h-32 border-b border-x border-x-zinc-500/20 border-b-zinc-500/20 first:border-t-zinc-500/20 first:border-t bg-[#FAFAFA] hover:bg-[#4A1A51] transition ease-in-out"
-                key={i}
               >
                 <Cursor
                   attachToParent
@@ -128,6 +133,7 @@ export default function Work() {
                   <ArrowRight className="mr-8 h-8 text-[#4A1A51] group-hover:text-[#FAFAFA]" />
                 </th>
               </tr>
+              </Link>
             ))}
           </tbody>
         </table>

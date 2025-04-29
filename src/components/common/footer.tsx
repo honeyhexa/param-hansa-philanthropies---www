@@ -10,14 +10,14 @@ export const Footer = ({ theme = "dark" }) => (
     </div>
     <div className="flex flex-col">
       <div className="w-full h-full m-auto max-w-6xl py-32 grid grid-cols-4">
-        <div className="flex flex-col col-start-1 col-span-1">
+        <Link href="/" className="flex flex-col col-start-1 col-span-1">
           <PHPLogo className="ml-2 h-20 w-20" />
           <p className="pl-2 font-schibsted font-bold tracking-[-0.04em] text-3xl leading-[1.0]">
             Param Hansa <br />
             <span className="opacity-50">Philanthropies</span>
           </p>
           {/* <p className="pl-2 pt-8 font-instrument text-xl">Supporting research where compute meets life.</p> */}
-        </div>
+        </Link>
         <div className="flex flex-col col-start-3 col-span-1">
           <ul className="flex flex-col pl-2 font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.0] *:py-3">
             {QUICK_LINKS.map((o, i) => (<Link className="first:opacity-50" key={i} href={o.href ?? "/"}>{o.label}</Link>))}
