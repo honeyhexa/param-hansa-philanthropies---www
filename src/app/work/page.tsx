@@ -5,13 +5,20 @@ import Section from "@/components/misc/section";
 import { AnimatedBackground } from "@/components/motion-primitives/animated-background";
 import { Cursor } from "@/components/motion-primitives/cursor";
 import { HeroV1 } from "@/components/sections/hero/pages";
-import { COLLABS, STATS } from "@/content/work";
+import { STATS } from "@/content/work";
 import { cn } from "@/lib/utils";
+import { urlFor } from "@/sanity/lib/image";
+import { sanityFetch } from "@/sanity/lib/live";
+import { allWorksQuery } from "@/sanity/lib/queries";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Work() {
+export default async function Work() {
+  const [{ data: works }] = await Promise.all([
+      sanityFetch({ query: allWorksQuery }),
+    ]);
+
   return (
     <Page>
       <HeroV1
@@ -84,12 +91,13 @@ export default function Work() {
         <table>
           <thead></thead>
           <tbody className="pb-64">
-            {COLLABS.map((o, i) => (
+            {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+            {works.map((o: any, i: number) => (
             <Link
               data-id={`card-${i}`}
               className=""
               key={i}
-              href={`/work/why-do-we-do-what-we-do`}
+              href={`/work/${o.slug}`}
             >
               <tr 
                 className="group grid grid-cols-8 h-32 border-b border-x border-x-zinc-500/20 border-b-zinc-500/20 first:border-t-zinc-500/20 first:border-t bg-[#FAFAFA] hover:bg-[#4A1A51] transition ease-in-out"
@@ -113,9 +121,9 @@ export default function Work() {
                 >
                   <Image
                     // src='https://i.pinimg.com/564x/4c/95/69/4c9569ab2928e5ae400a6a34e7c537a0.jpg'
-                    src={o.src}
+                    src={urlFor(o.mainImage)?.url?.()}
                     alt="Christian Church, Eastern Europe"
-                    className="h-64 w-64 bg-white border border-zinc-500"
+                    className="h-64 w-64 object-cover bg-white border border-zinc-500"
                     height={200}
                     width={200}
                   />
@@ -124,7 +132,7 @@ export default function Work() {
                   <div className="ml-8 h-3 w-3 rounded-full bg-zinc-200" />
                 </th>
                 <th className="col-start-2 col-span-2 flex items-center justify-start text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-schibsted font-semibold tracking-[-0.04em] text-2xl leading-[1.2]">
-                  {o.name}
+                  {o.title}
                 </th>
                 <th className="col-start-5 col-span-3 flex items-center justify-start text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2]">
                   {o.description}

@@ -23,3 +23,16 @@ export const allPostsQuery = defineQuery(`
       ${postFields}
     }
   `);
+
+export const allWorksQuery = defineQuery(`
+    *[_type == "work" && defined(slug.current)] | order(date desc, _updatedAt desc) {
+      ${postFields}
+    }
+  `);
+
+export const workQuery = defineQuery(`
+    *[_type == "work" && slug.current == $slug] [0] {
+      sections,
+      ${postFields}
+    }
+  `);

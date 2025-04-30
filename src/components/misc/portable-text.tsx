@@ -6,6 +6,7 @@ import ZoomImage from "./zoom-image";
 import { urlFor } from "@/sanity/lib/image";
 import Link from "next/link";
 import { PortableText, type PortableTextBlock } from "next-sanity";
+import { AnimatedLines } from "./animated-lines";
 
 export const H1: React.FC<any> = ({ className, ...rest }) => (
   <h1 size="3xl" className={cn("font-semibold ", className)} {...rest} />
@@ -27,6 +28,12 @@ export const H6: React.FC<any> = ({ className, ...rest }) => (
 );
 export const Para: React.FC<any> = ({ className, ...rest }) => (
   <p size="lg" className={cn("text-neutral-600", className)} {...rest} />
+);
+
+export const Quote: React.FC<any> = ({ className, children, ...rest }) => (
+  <blockquote size="lg" className={cn("border-l border-l-zinc-500/20 px-4 my-8 text-2xl text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] leading-7", className)} {...rest} >
+    <AnimatedLines text={`${children}`}/>
+    </blockquote>
 );
 export const Anchor: React.FC<any> = ({ className, ...rest }) => (
   <Link
@@ -72,10 +79,9 @@ export const OrderedListItem: React.FC<any> = ({
 export const Image: React.FC<any> = (props) => <img {...props} />;
 
 export const ImageBlock: React.FC<any> = ({
-  value: { alt, asset, caption },
+  value: { alt, asset },
   ...rest
 }) => {
-  console.log("HERE", alt, asset, caption);
   const src = urlFor(asset).url();
   return (
     <figure className="mt-2">
@@ -104,6 +110,7 @@ export const components = {
     h6: H6,
     p: Para,
     normal: Para,
+    blockquote: Quote,
   },
   marks: {
     link: Anchor,
