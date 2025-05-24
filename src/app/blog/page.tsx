@@ -9,6 +9,8 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 0;
+
 export default async function ArticlePage() {
   const [{ data: posts }] = await Promise.all([
     sanityFetch({ query: allPostsQuery }),

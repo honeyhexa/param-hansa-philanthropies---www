@@ -14,6 +14,8 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
+export const revalidate = 0;
+
 export default async function Work() {
   const [{ data: works }] = await Promise.all([
       sanityFetch({ query: allWorksQuery }),
