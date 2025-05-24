@@ -88,14 +88,14 @@ export default async function Work() {
               text="We are committed to supporting research initiatives with esteemed institutions, universities, and cutting-edge laboratories to drive progress at the intersection of computing and life sciences."
             />
 
-        <table>
+        <table className="w-full">
           <thead></thead>
-          <tbody className="pb-64">
+          <tbody className="w-full pb-64">
             {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
             {works.map((o: any, i: number) => (
             <Link
               data-id={`card-${i}`}
-              className=""
+              className="w-full"
               key={i}
               href={`/work/${o.slug}`}
             >

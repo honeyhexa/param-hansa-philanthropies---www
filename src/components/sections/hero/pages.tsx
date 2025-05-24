@@ -39,7 +39,7 @@ export const HeroV0 = ({
           type="video/webm"
         /> */}
         <source
-          src="https://designed-cells.chipsa.design/video/about-sequence/about-sequence-2.webm"
+          src="/about-sequence-2.webm"
           type="video/webm"
         />
       </video>
