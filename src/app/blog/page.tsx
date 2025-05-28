@@ -9,7 +9,7 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export const revalidate = 0;
+export const dynamic = "force-dynamic";
 
 export default async function ArticlePage() {
   const [{ data: posts }] = await Promise.all([
@@ -74,7 +74,7 @@ export default async function ArticlePage() {
                           // src='https://i.pinimg.com/564x/4c/95/69/4c9569ab2928e5ae400a6a34e7c537a0.jpg'
                           src={urlFor(o.mainImage).url()}
                           alt="Christian Church, Eastern Europe"
-                          className="w-96 aspect-[16/9]  bg-white border border-zinc-500"
+                          className="w-96 aspect-[16/9] object-cover bg-white border border-zinc-500"
                           height={720}
                           width={1280}
                         />

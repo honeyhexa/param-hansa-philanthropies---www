@@ -38,10 +38,10 @@ export const HeroV0 = ({
           src="https://designed-cells.chipsa.design/video/r&d-sequence/r&d-sequence-2.webm"
           type="video/webm"
         /> */}
-        <source
+        {/* <source
           src="/about-sequence-2.webm"
           type="video/webm"
-        />
+        /> */}
       </video>
     </div>
     

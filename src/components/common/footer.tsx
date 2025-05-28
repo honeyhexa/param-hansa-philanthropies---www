@@ -16,8 +16,11 @@ export const Footer = ({ theme = "dark" }) => (
             Param Hansa <br />
             <span className="opacity-50">Philanthropies</span>
           </p>
-          {/* <p className="pl-2 pt-8 font-instrument text-xl">Supporting research where compute meets life.</p> */}
+          <p className="pl-2 pt-8 font-instrument text-xl">Supporting research where compute meets life.</p>
         </Link>
+        <div className="flex flex-col row-start-2 col-span-1">
+          info@phvalues.org
+        </div>
         <div className="flex flex-col col-start-3 col-span-1">
           <ul className="flex flex-col pl-2 font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.0] *:py-3">
             {QUICK_LINKS.map((o, i) => (<Link className="first:opacity-50" key={i} href={o.href ?? "/"}>{o.label}</Link>))}
@@ -52,7 +55,7 @@ export const Footer = ({ theme = "dark" }) => (
 const QUICK_LINKS = [
   { label: "Quick Links" },
   { label: "Our Work", href: "/work" },
-  { label: "Get Involved", href: "/work" },
+  { label: "Get Involved", href: "/apply" },
   { label: "Philosophy", href: "/philosophy" },
   { label: "About Us", href: "/about" },
 ];

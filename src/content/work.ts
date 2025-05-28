@@ -1,12 +1,12 @@
 export const STATS = [
-  { label: "Research Projects Funded", value: "50+" },
-  null,
-  { label: "Invested in Life Sciences", value: "$10M+" },
-  null,
-  null,
-  { label: "Published Research Papers", value: "100+" },
-  null,
   { label: "Institutional Collaborations", value: "10+" },
+  null,
+  { label: "Commited", value: "$15M+" },
+  null,
+  null,
+  { label: "Initiatives", value: "15+" },
+  null,
+  { label: "Research Publications", value: "6+" },
 ];
 
 export const COLLABS = [
