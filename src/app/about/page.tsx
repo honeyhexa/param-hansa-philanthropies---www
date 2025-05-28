@@ -77,20 +77,20 @@ export default function AboutPage() {
           <div className="flex flex-col">
             <Image
               alt="dheeraj quote"
-              className="p-16"
-              src="/dheeraj-quote.png"
-              width={3368}
-              height={2217}
+              className="p-16 h-[40rem] object-cover"
+              src="/amit-kumar.webp"
+              width={3000}
+              height={4000}
             />
             <p className="text-center">Amit Kumar</p>
           </div>
           <div className="flex flex-col">
             <Image
               alt="dheeraj quote"
-              className="p-16"
-              src="/dheeraj-quote.png"
-              width={3368}
-              height={2217}
+              className="p-16 h-[40rem] object-cover"
+              src="/rakesh-kumar.webp"
+              width={2812}
+              height={4000}
             />
             <p className="text-center">Rakesh Kumar</p>
           </div>
