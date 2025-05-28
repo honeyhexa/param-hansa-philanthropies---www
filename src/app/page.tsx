@@ -77,7 +77,7 @@ export default function Home() {
         </div>
         <div className="mt-16 grid grid-cols-4">
           <Link
-            href="/"
+            href="/apply"
             className="group col-start-3 col-span-1"
           >
             <div className="group-hover:bg-[#FAFAFA] group-hover:text-[#4A1A51] flex flex-row items-center justify-between px-2 py-4 border-y border-y-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">

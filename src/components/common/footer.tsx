@@ -18,9 +18,6 @@ export const Footer = ({ theme = "dark" }) => (
           </p>
           <p className="pl-2 pt-8 font-instrument text-xl">Supporting research where compute meets life.</p>
         </Link>
-        <div className="flex flex-col row-start-2 col-span-1">
-          info@phvalues.org
-        </div>
         <div className="flex flex-col col-start-3 col-span-1">
           <ul className="flex flex-col pl-2 font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.0] *:py-3">
             {QUICK_LINKS.map((o, i) => (<Link className="first:opacity-50" key={i} href={o.href ?? "/"}>{o.label}</Link>))}
@@ -62,8 +59,8 @@ const QUICK_LINKS = [
 
 const RESOURCES = [
   { label: "Resources" },
-  { label: "Press", href: "/press" },
+  // { label: "Press", href: "/press" },
   { label: "Blog", href: "/blog" },
-  { label: "Documents", href: "/documents" },
-  { label: "Brand", href: "/brand" },
+  // { label: "Documents", href: "/documents" },
+  // { label: "Brand", href: "/brand" },
 ];
