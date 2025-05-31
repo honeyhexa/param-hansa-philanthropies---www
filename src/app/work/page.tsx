@@ -7,19 +7,17 @@ import { Cursor } from "@/components/motion-primitives/cursor";
 import { HeroV1 } from "@/components/sections/hero/pages";
 import { STATS } from "@/content/work";
 import { cn } from "@/lib/utils";
-import { urlFor } from "@/sanity/lib/image";
 import { sanityFetch } from "@/sanity/lib/live";
 import { allWorksQuery } from "@/sanity/lib/queries";
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
+import { ArrowRight, PlusIcon } from "lucide-react";
 import Link from "next/link";
 
-export const revalidate = 0;
+export const dynamic = "force-dynamic";
 
 export default async function Work() {
   const [{ data: works }] = await Promise.all([
-      sanityFetch({ query: allWorksQuery }),
-    ]);
+    sanityFetch({ query: allWorksQuery }),
+  ]);
 
   return (
     <Page>
@@ -29,10 +27,10 @@ export default async function Work() {
       />
       <Section>
         <div className="">
-            <AnimatedLines
-              className="text-pretty pl-2 pr-8 py-32 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
-              text="Our work creates ripples of progress, measurable impact through innovative research and powerful collaborations with leading institutions."
-            />
+          <AnimatedLines
+            className="text-pretty pl-2 pr-8 py-32 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
+            text="Our work creates ripples of progress, measurable impact through innovative research and powerful collaborations with leading institutions."
+          />
           <div className="grid grid-cols-4 bg-[#FAFAFA]">
             <AnimatedBackground
               className="bg-[#4A1A51]"
@@ -85,68 +83,69 @@ export default async function Work() {
 
       <Section>
         <div className="">
-            <AnimatedLines
+          <AnimatedLines
             className="text-pretty pl-2 pr-16 py-32 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
-              text="We are committed to supporting research initiatives with esteemed institutions, universities, and cutting-edge laboratories to drive progress at the intersection of computing and life sciences."
-            />
+            text="We are committed to supporting research initiatives with esteemed institutions, universities, and cutting-edge laboratories to drive progress at the intersection of computing and life sciences."
+          />
 
-        <table className="w-full">
-          <thead></thead>
-          <tbody className="w-full pb-64">
-            {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
-            {works.map((o: any, i: number) => (
-            <Link
-              data-id={`card-${i}`}
-              className="w-full"
-              key={i}
-              href={`/work/${o.slug}`}
-            >
-              <tr 
-                className="group grid grid-cols-8 h-32 border-b border-x border-x-zinc-500/20 border-b-zinc-500/20 first:border-t-zinc-500/20 first:border-t bg-[#FAFAFA] hover:bg-[#4A1A51] transition ease-in-out"
-              >
-                <Cursor
-                  attachToParent
-                  variants={{
-                    initial: { height: "auto", opacity: 0, scale: 1 },
-                    animate: { height: "auto", opacity: 1, scale: 1 },
-                    exit: { height: "auto", opacity: 0, scale: 1 },
-                  }}
-                  transition={{
-                    type: "spring",
-                    duration: 0.3,
-                    bounce: 0.1,
-                  }}
-                  className="overflow-hidden"
-                  springConfig={{
-                    bounce: 0.01,
-                  }}
+          <table className="w-full">
+            <thead></thead>
+            <tbody className="w-full pb-64">
+              {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+              {works.map((o: any, i: number) => (
+                <Link
+                  data-id={`card-${i}`}
+                  className="w-full"
+                  key={i}
+                  href={`/work/${o.slug}`}
                 >
-                  <Image
+                  <tr className="group grid grid-cols-8 h-32 border-b border-x border-x-zinc-500/20 border-b-zinc-500/20 first:border-t-zinc-500/20 first:border-t bg-[#FAFAFA] hover:bg-[#4A1A51] transition ease-in-out">
+                    <Cursor
+                      attachToParent
+                      variants={{
+                        initial: { opacity: 0, scale: 1 },
+                        animate: { opacity: 1, scale: 1 },
+                        exit: { opacity: 0, scale: 1 },
+                      }}
+                      transition={{
+                        type: "spring",
+                        duration: 0.3,
+                        bounce: 0.1,
+                      }}
+                      className="overflow-hidden"
+                      springConfig={{
+                        bounce: 0.01,
+                      }}
+                    >
+                      <div className="px-3 py-1 ml-36 flex items-center justify-center rounded-[24px] bg-gray-500/40 backdrop-blur-md dark:bg-gray-300/40 inline-flex items-center text-sm text-white dark:text-black">
+                        Read More <PlusIcon className="ml-1 h-4 w-4" />
+                      </div>
+                      {/* <Image
                     // src='https://i.pinimg.com/564x/4c/95/69/4c9569ab2928e5ae400a6a34e7c537a0.jpg'
                     src={urlFor(o.mainImage)?.url?.()}
                     alt="Christian Church, Eastern Europe"
                     className="h-64 w-64 object-cover bg-white border border-zinc-500"
                     height={200}
                     width={200}
-                  />
-                </Cursor>
-                <th className="flex flex-col items-start justify-center">
-                  <div className="ml-8 h-3 w-3 rounded-full bg-zinc-200" />
-                </th>
-                <th className="col-start-2 col-span-2 flex items-center justify-start text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-schibsted font-semibold tracking-[-0.04em] text-2xl leading-[1.2]">
-                  {o.title}
-                </th>
-                <th className="col-start-5 col-span-3 flex items-center justify-start text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2]">
-                  {o.description}
-                </th>
-                <th className="flex flex-col items-end justify-center">
-                  <ArrowRight className="mr-8 h-8 text-[#4A1A51] group-hover:text-[#FAFAFA]" />
-                </th>
-              </tr>
-              </Link>
-            ))}
-          </tbody>
-        </table>
+                  /> */}
+                    </Cursor>
+                    <th className="flex flex-col items-start justify-center">
+                      <div className="ml-8 h-3 w-3 rounded-full bg-zinc-200" />
+                    </th>
+                    <th className="col-start-2 col-span-2 flex items-center justify-start text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-schibsted font-semibold tracking-[-0.04em] text-2xl leading-[1.2]">
+                      {o.title}
+                    </th>
+                    <th className="col-start-5 col-span-3 flex items-center justify-start text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2]">
+                      {o.description}
+                    </th>
+                    <th className="flex flex-col items-end justify-center">
+                      <ArrowRight className="mr-8 h-8 text-[#4A1A51] group-hover:text-[#FAFAFA]" />
+                    </th>
+                  </tr>
+                </Link>
+              ))}
+            </tbody>
+          </table>
         </div>
       </Section>
     </Page>

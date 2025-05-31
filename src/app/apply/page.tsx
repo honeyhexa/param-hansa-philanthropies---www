@@ -1,5 +1,6 @@
 import { Page } from "@/components/common/page";
 import Section from "@/components/misc/section";
+import { APPLY_INDIVIDUAL_LINK, APPLY_ORGANIZATION_LINK } from "@/content/apply";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -39,17 +40,17 @@ export default function AboutPage() {
               initiatives foster enduring societal impact.
             </p>
             <div className="flex-grow"></div>
-            <Link href="/" className="group col-start-3 col-span-1">
-              <div className="group-hover:bg-[#FAFAFA] group-hover:text-[#4A1A51] flex flex-row items-center justify-between px-2 py-4 border-t border-t-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
+            <Link href={APPLY_INDIVIDUAL_LINK} className="group col-start-3 col-span-1">
+              <div className=" text-[#4A1A51] group-hover:text-[#183FF5] flex flex-row items-center justify-center px-2 py-4 border-t border-t-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
                 <>
-                  Get Involved <ArrowRight className="h-8 mr-4" />
+                  Apply as an individual <ArrowRight className="h-8 ml-4" />
                 </>
               </div>
             </Link>
           </div>
           <div className="border border-zinc-500/20 border-l-[0.5px] bg-white flex flex-col">
             <h2 className="text-center col-start-1 col-span-4 px-2 pt-16 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]">
-              Organisation
+              Organization
             </h2>
             <p className="text-center col-start-1 col-span-4 px-16 pt-4 pb-16 text-zinc-500 text-pretty font-schibsted font-semibold tracking-[-0.04em] text-base leading-[1.1]">
               Param Hansa Philanthropies fosters collaborations with
@@ -60,10 +61,10 @@ export default function AboutPage() {
             </p>
             <div className="flex-grow"></div>
 
-            <Link href="/" className="group col-start-3 col-span-1">
-              <div className="group-hover:bg-[#FAFAFA] group-hover:text-[#4A1A51] flex flex-row items-center justify-between px-2 py-4 border-t border-t-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
+            <Link href={APPLY_ORGANIZATION_LINK} className="group col-start-3 col-span-1">
+              <div className=" text-[#4A1A51] group-hover:text-[#183FF5] flex flex-row items-center justify-center px-2 py-4 border-t border-t-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
                 <>
-                  Get Involved <ArrowRight className="h-8 mr-4" />
+                  Apply as an organization <ArrowRight className="h-8 ml-4" />
                 </>
               </div>
             </Link>

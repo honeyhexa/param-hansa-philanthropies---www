@@ -78,9 +78,9 @@ export default function Home() {
         <div className="mt-16 grid grid-cols-4">
           <Link
             href="/apply"
-            className="group col-start-3 col-span-1"
+            className="group col-start-3 col-span-1 bg-white"
           >
-            <div className="group-hover:bg-[#FAFAFA] group-hover:text-[#4A1A51] flex flex-row items-center justify-between px-2 py-4 border-y border-y-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
+            <div className=" text-[#4A1A51] group-hover:text-[#183FF5] flex flex-row items-center justify-between px-2 py-4 border-y border-y-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
             <>
               Get Involved <ArrowRight className="h-8 mr-4" />
             </>
@@ -100,8 +100,8 @@ export default function Home() {
           <div className="pb-32 grid grid-cols-4">
             {[...LOGOS].map((o, i) =>
               o ? (
-                <ZStack className="group border-y border-y-zinc-500/20" key={i}>
-                  <div className=" h-72 p-6 flex flex-col items-center justify-center text-[#4A1A51] group-hover:text-[#FAFAFA] transition ease-in-out">
+                <ZStack className="group border border-zinc-500/20" key={i}>
+                  <div className=" h-72 p-6 flex flex-col items-center justify-center text-[#4A1A51] bg-white group-hover:text-[#FAFAFA] transition ease-in-out">
                     <Image
                       className="grayscale"
                       alt="logo"
