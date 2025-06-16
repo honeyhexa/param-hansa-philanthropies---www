@@ -1,6 +1,6 @@
+import { Text } from "@/components/common";
 import { Page } from "@/components/common/page";
 import { ZStack } from "@/components/misc";
-import { AnimatedLines } from "@/components/misc/animated-lines";
 import Section from "@/components/misc/section";
 import { AnimatedBackground } from "@/components/motion-primitives/animated-background";
 import { Cursor } from "@/components/motion-primitives/cursor";
@@ -26,12 +26,17 @@ export default async function Work() {
         lineTwo={`collaborations that <i>multiply.</i>`}
       />
       <Section>
-        <div className="">
-          <AnimatedLines
+        <div className="text-dark">
+          {/* <AnimatedLines
             className="text-pretty pl-2 pr-8 py-32 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
             text="Our work creates ripples of progress, measurable impact through innovative research and powerful collaborations with leading institutions."
-          />
-          <div className="grid grid-cols-4 bg-[#FAFAFA]">
+          /> */}
+          <Text as="h2" scale="h3" className="text-pretty pl-2 pr-8 py-32">
+            Our work creates ripples of progress, measurable impact through
+            innovative research and powerful collaborations with leading
+            institutions.
+          </Text>
+          <div className="grid grid-cols-2 md:grid-cols-4 bg-[#FAFAFA]">
             <AnimatedBackground
               className="bg-[#4A1A51]"
               transition={{
@@ -50,27 +55,27 @@ export default async function Work() {
                   >
                     <div
                       className={cn(
-                        " h-72 p-6 flex flex-col text-[#4A1A51] group-hover:text-[#FAFAFA] transition ease-in-out "
+                        "aspect-square p-6 flex flex-col text-[#4A1A51] group-hover:text-[#FAFAFA] transition ease-in-out "
                       )}
                     >
-                      <p className="font-schibsted text-7xl font-bold tracking-[-0.04em] leading-[1.1]">
+                      <Text as="h3" scale="h2" className="font-bold">
                         {o.value}
-                      </p>
+                      </Text>
                       <span className="flex-grow"></span>
-                      <p className="font-schibsted text-2xl font-semibold tracking-[-0.04em] leading-[1.1]">
+                      <Text as="p" scale="h6" className="">
                         {o.label}
-                      </p>
+                      </Text>
                     </div>
                   </ZStack>
                 ) : (
                   <ZStack
-                    className="border border-zinc-500/20"
+                    className="border border-zinc-500/20 hidden md:block"
                     key={i}
                     data-id={`card-${i}`}
                   >
                     <div
                       className={cn(
-                        "h-72 p-6 flex flex-col text-[#4A1A51] transition ease-in-out bg-[#FAFAFA]"
+                        "aspect-square w-full h-full p-6 flex flex-col text-[#4A1A51] transition ease-in-out bg-[#FAFAFA]"
                       )}
                     ></div>
                   </ZStack>
@@ -82,11 +87,17 @@ export default async function Work() {
       </Section>
 
       <Section>
-        <div className="">
-          <AnimatedLines
+        <div className="text-dark">
+          {/* <AnimatedLines
             className="text-pretty pl-2 pr-16 py-32 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
             text="We are committed to supporting research initiatives with esteemed institutions, universities, and cutting-edge laboratories to drive progress at the intersection of computing and life sciences."
-          />
+          /> */}
+
+          <Text as="h2" scale="h3" className="text-pretty pl-2 pr-16 py-32">
+            We are committed to supporting research initiatives with esteemed
+            institutions, universities, and cutting-edge laboratories to drive
+            progress at the intersection of computing and life sciences.
+          </Text>
 
           <table className="w-full">
             <thead></thead>
@@ -129,17 +140,17 @@ export default async function Work() {
                     width={200}
                   /> */}
                     </Cursor>
-                    <th className="flex flex-col items-start justify-center">
+                    <th className="col-start-1 col-span-1  flex flex-col items-start justify-center">
                       <div className="ml-8 h-3 w-3 rounded-full bg-zinc-200" />
                     </th>
-                    <th className="col-start-2 col-span-2 flex items-center justify-start text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-schibsted font-semibold tracking-[-0.04em] text-2xl leading-[1.2]">
+                    <th className="col-start-2 col-span-6 flex items-center justify-start text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-schibsted font-semibold tracking-[-0.04em] text-2xl leading-[1.2]">
                       {o.title}
                     </th>
-                    <th className="col-start-5 col-span-3 flex items-center justify-start text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2]">
+                    {/* <th className="col-start-5 col-span-3 flex items-center justify-start text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2]">
                       {o.description}
-                    </th>
-                    <th className="flex flex-col items-end justify-center">
-                      <ArrowRight className="mr-8 h-8 text-[#4A1A51] group-hover:text-[#FAFAFA]" />
+                    </th> */}
+                    <th className="col-start-8 col-span-1 flex flex-col items-center justify-center">
+                      <ArrowRight className=" h-8 text-[#4A1A51] group-hover:text-[#FAFAFA]" />
                     </th>
                   </tr>
                 </Link>

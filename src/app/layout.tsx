@@ -33,13 +33,13 @@ export default function RootLayout({
       <body
         className={`${instrumentSerif.variable} ${schibstedSans.variable} antialiased`}
       >
-        <div className="hidden xl:block">{children}</div>
+        <div className="xl:block">{children}</div>
 
-        <div className="flex flex-col items-center text-center text-lg justify-center w-screen h-screen xl:hidden animate-pulse">
+        {/* <div className="flex flex-col items-center text-center text-lg justify-center w-screen h-screen xl:hidden animate-pulse">
           {" "}
           Mobile website is work in progress, <br /> Please open on
           desktop or laptop.
-        </div>
+        </div> */}
       </body>
     </html>
   );

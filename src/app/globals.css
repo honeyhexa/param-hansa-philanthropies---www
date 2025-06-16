@@ -29,6 +29,9 @@ body {
   --font-instrument: var(--font-instrument-serif);
   --font-schibsted: var(--font-schibsted-sans);
 
+  --color-light: #FAFAFA;
+  --color-dark: #4A1A51;
+
   --animate-marquee: marquee 5s linear infinite;
   @keyframes marquee {
     0% {

@@ -1,6 +1,6 @@
+import { Text } from "@/components/common";
 import { Page } from "@/components/common/page";
 import { ZStack } from "@/components/misc";
-import { AnimatedLines } from "@/components/misc/animated-lines";
 import Section from "@/components/misc/section";
 import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
 import { HeroV0 } from "@/components/sections/hero/pages";
@@ -34,76 +34,99 @@ export default function Home() {
       />
 
       <Section contained={false}>
+        <InfiniteSlider
+          className="py-8 md:py-8 lg:py-12 xl:py-16 text-dark"
+          gap={24}
+        >
+          <Text scale="h1">
+            Progress should serve humanity, not just speed.{" "}
+          </Text>
+        </InfiniteSlider>
+      </Section>
+
+      {/* <Section contained={false}>
         <InfiniteSlider gap={24}>
           <p className="py-16 px-16 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-8xl leading-[1.1]">
             Progress should serve humanity, not just speed.{" "}
           </p>
         </InfiniteSlider>
-      </Section>
+      </Section> */}
 
       <Section>
-        <div className="flex flex-col">
+        <div className="flex flex-col text-dark">
           <Image
             alt="dheeraj quote"
-            className="p-16"
+            className="p-8 md:p-8 lg:p-12 xl:p-16"
             src="/dheeraj-quote.png"
             width={3368}
             height={2217}
           />
 
-          <AnimatedLines
-            className="px-2 py-32 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
-            text="Param Hansa Philanthropies fuels discoveries that transcend disciplines at the nexus of computing and life sciences. We don’t follow trends—we build bridges to a future where technology serves life itself."
-          />
+          <Text
+            as="h2"
+            scale="h3"
+            className="pl-2 pr-8 py-8 md:py-16 lg:py-24 xl:py-32 text-pretty"
+            // className="px-2 py-32 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
+          >
+            Param Hansa Philanthropies fuels discoveries that transcend
+            disciplines at the convergence of computing and life sciences. We
+            don’t follow trends—we build bridges to a future where technology
+            serves life itself.
+          </Text>
         </div>
       </Section>
 
       <Section>
         <div className="grid grid-cols-4 text-[#4A1A51] ">
-          <div className="col-start-3 col-span-2 border-t border-t-zinc-500/20 px-2">
-            <p className="bg-[#FAFAFA] pt-8 pb-16 font-schibsted font-semibold tracking-[-0.04em] text-md leading-[1.2] ">
-              Through strategic partnerships and funding, we have enabled
+          <div className="col-start-1 col-span-4 md:col-start-3 md:col-span-2 border-t border-t-zinc-500/20 px-2">
+            <Text as="p" className="bg-light pt-8 pb-16" scale="p1">
+              Through strategic partnerships and grant-making, we have enabled
               significant advancements in computational oncology, contributing
               to research & development in fight against cancer.
-            </p>
+            </Text>
           </div>
-          <div className="col-start-3 col-span-2 border-t border-t-zinc-500/20 px-2 border-b border-b-zinc-500/20">
-            <p className="bg-[#FAFAFA] pt-8 pb-16 font-schibsted font-semibold tracking-[-0.04em] text-md leading-[1.2] ">
+          <div className="col-start-1 col-span-4 md:col-start-3 md:col-span-2 border-t border-t-zinc-500/20 px-2 border-b border-b-zinc-500/20">
+            <Text as="p" className="bg-light pt-8 pb-16" scale="p1">
               Additionally, by supporting young scientists, we are nurturing the
               next generation of innovators who will continue to push the
               boundaries of scientific knowledge.
-            </p>
+            </Text>
           </div>
         </div>
         <div className="mt-16 grid grid-cols-4">
           <Link
             href="/apply"
-            className="group col-start-3 col-span-1 bg-white"
+            className="group col-start-1 col-span-2 md:col-start-3 md:col-span-1 bg-white"
           >
-            <div className=" text-[#4A1A51] group-hover:text-[#183FF5] flex flex-row items-center justify-between px-2 py-4 border-y border-y-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
-            <>
-              Get Involved <ArrowRight className="h-8 mr-4" />
-            </>
+            <div className=" text-[#4A1A51] group-hover:text-[#183FF5] flex flex-row items-center justify-between px-2 py-4 border border-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
+              <>
+                Get Involved <ArrowRight className="h-8 mr-4" />
+              </>
             </div>
           </Link>
-        
-      </div>
+        </div>
       </Section>
 
       <Section>
-        <div className="">
-          <AnimatedLines
-            className="px-2 py-64 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
-            text="Our work creates ripples of progress, measurable impact through innovative research and powerful collaborations with leading institutions."
-          />
+        <div className="text-dark">
+          <Text
+            as="h2"
+            scale="h3"
+            className="pl-2 pr-8 py-8 md:py-16 lg:py-24 xl:py-32 text-pretty"
+            // className="px-2 py-64 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
+          >
+            Our work creates ripples of progress, measurable impact through
+            innovative research and powerful collaborations with leading
+            institutions.
+          </Text>
 
-          <div className="pb-32 grid grid-cols-4">
+          <div className="pb-32 grid grid-cols-2 md:grid-cols-4">
             {[...LOGOS].map((o, i) =>
               o ? (
                 <ZStack className="group border border-zinc-500/20" key={i}>
-                  <div className=" h-72 p-6 flex flex-col items-center justify-center text-[#4A1A51] bg-white group-hover:text-[#FAFAFA] transition ease-in-out">
+                  <div className="aspect-square p-6 flex flex-col items-center justify-center text-[#4A1A51] bg-white group-hover:text-[#FAFAFA] transition ease-in-out">
                     <Image
-                      className="grayscale"
+                      className="grayscale "
                       alt="logo"
                       src={o.src}
                       height={120}

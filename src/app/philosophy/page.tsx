@@ -1,6 +1,6 @@
+import { Text } from "@/components/common";
 import { Page } from "@/components/common/page";
 import { Guides, ZStack } from "@/components/misc";
-import { AnimatedLines } from "@/components/misc/animated-lines";
 import Section from "@/components/misc/section";
 import { HeroV2 } from "@/components/sections/hero/pages";
 import { PILLARS } from "@/content/philosophy";
@@ -43,11 +43,14 @@ export default function Philosophy() {
         <div className="-mt-0 h-32 bg-linear-to-b from-[#FAFAFA] to-transparent"></div>
         <div className="-mt-32 h-32 bg-linear-to-t from-[#FAFAFA] to-transparent"></div>
         <div className="w-full m-auto max-w-6xl">
-          <div className="">
-            <AnimatedLines
-              className="px-2 pr-12 py-32 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
+          <div className="text-dark">
+            {/* <AnimatedLines
+              className="px-2 pr-12 py-32 text-[#4A1A51]"
               text="Meet our four pillars that don’t just guide us — they define us, they’re the gears of our operating system."
-            />
+            /> */}
+            <Text as="h2" scale="h3" className="px-2 pr-12 py-32 ">
+            Meet our four pillars that don’t just guide us — they define us, they’re the gears of our operating system.
+            </Text>
           </div>
         </div>
       </ZStack>

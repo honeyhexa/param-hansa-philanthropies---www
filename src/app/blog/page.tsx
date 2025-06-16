@@ -1,3 +1,4 @@
+import { Text } from "@/components/common";
 import { Page } from "@/components/common/page";
 import Section from "@/components/misc/section";
 import { AnimatedGroup } from "@/components/motion-primitives/animated-group";
@@ -19,13 +20,13 @@ export default async function ArticlePage() {
     <Page headerProps={{ theme: "dark" }}>
       <Section
         sectionProps={{
-          className: "bg-[#4A1A51]",
+          className: "bg-dark text-light",
         }}
       >
         <div className="border-x border-x-zinc-500/20">
           <div className="h-96 flex flex-col justify-between">
             <div></div>
-            <div>
+            {/* <div>
               <h1 className="px-2 text-center text-[#FAFAFA] font-instrument tracking-[-0.01em] text-7xl leading-[1.25]">
                 Explore all resources
               </h1>
@@ -33,6 +34,24 @@ export default async function ArticlePage() {
                 Discover latest in reports, whitepapers, and educational
                 materials from our funded research and initiatives.
               </p>
+            </div> */}
+            <div>
+              <Text
+                as="h1"
+                scale="h2"
+                font="serif"
+                className="px-2 text-center font-normal tracking-[-0.01em] leading-[1.25]"
+              >
+                Explore all resources
+              </Text>
+              <Text
+                as="p"
+                scale="p1"
+                className="px-8 md:px-28 lg:px-40 xl:px-64 pb-16 text-center opacity-70"
+              >
+                Discover latest in reports, whitepapers, and educational
+                materials from our funded research and initiatives.
+              </Text>
             </div>
           </div>
         </div>
@@ -44,7 +63,7 @@ export default async function ArticlePage() {
             <thead></thead>
             <tbody className="pb-64 border-t border-t-zinc-500/20">
               <AnimatedGroup preset="slide">
-                 {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
+                {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
                 {posts.map((o: any, i: any) => (
                   <Link
                     data-id={`card-${i}`}
@@ -79,25 +98,25 @@ export default async function ArticlePage() {
                           width={1280}
                         />
                       </Cursor>
-                      <th className="flex flex-col items-start justify-center">
+                      <th className="hidden md:col-start-1 md:col-span-1 flex flex-col items-start justify-center">
                         <div className="ml-8 h-3 w-3 rounded-full bg-zinc-200" />
                       </th>
-                      <th className="col-start-2 col-span-4 -ml-16 mr-16 flex items-center justify-start">
-                        <p className="text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-schibsted font-semibold tracking-[-0.04em] text-xl leading-[1.2] truncate">
+                      <th className="md:col-start-1 col-span-7 md:col-start-2 md:col-span-4 xl:-ml-16 mr-16 flex items-center justify-start">
+                        <p className="px-2 text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-schibsted font-semibold tracking-[-0.04em] text-xl leading-[1.2] truncate">
                           {o.title}
                         </p>
                       </th>
-                      <th className="col-start-6 col-span-1 mr-4 flex items-center justify-start">
+                      <th className="hidden md:col-start-6 md:col-span-1 mr-4 flex items-center justify-start">
                         <p className="text-[#4A1A51]/50 group-hover:text-[#FAFAFA] capitalize font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2] truncate">
                           {o.name}
                         </p>
                       </th>
-                      <th className="col-start-7 col-span-1 mr-4 flex items-center justify-start">
+                      <th className="hidden md:col-start-7 md:col-span-1 mr-4 flex items-center justify-start">
                         <p className="text-[#4A1A51]/50 group-hover:text-[#FAFAFA] font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2] truncate">
                           {new Date(o.date).toLocaleDateString()}
                         </p>
                       </th>
-                      <th className="flex flex-col items-end justify-center">
+                      <th className="col-start-8 col-span-1 flex flex-col items-end justify-center">
                         <ArrowRight className="mr-8 h-8 text-[#4A1A51] group-hover:text-[#FAFAFA]" />
                       </th>
                     </tr>
