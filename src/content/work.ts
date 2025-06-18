@@ -6,7 +6,7 @@ export const STATS = [
   null,
   { label: "Initiatives", value: "15+" },
   null,
-  { label: "Research Publications", value: "6+" },
+  { label: "Research Publications", value: "10+" },
 ];
 
 export const COLLABS = [

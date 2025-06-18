@@ -21,7 +21,7 @@ export const ZStack: React.FC<any> = ({ children, className, ...rest }) => (
   export const Guides: React.FC = () => (
     <div className="flex flex-row w-full h-full justify-between">
       {[1, 2, 3, 4, 5].map((i) => (
-        <div key={i} className="w-[1px] h-full bg-zinc-500/20" />
+        <div key={i} className="w-[1px] h-full bg-zinc-500/15" />
       ))}
     </div>
   );

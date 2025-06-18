@@ -50,7 +50,7 @@ export const HeroV0 = ({
         <Text
           as="h1"
           scale="h1"
-          className="pl-2 pt-56 md:pt-64 lg:pt-72 xl:pt-84 font-instrument font-medium drop-shadow-xs"
+          className="pl-2 pt-56 md:pt-64 lg:pt-72 xl:pt-84 font-instrument font-normal drop-shadow-xs tracking-[-0.01em] leading-none"
           dangerouslySetInnerHTML={{
             __html: lineOne,
           }}
@@ -63,7 +63,7 @@ export const HeroV0 = ({
         <Text
           as="h1"
           scale="h1"
-          className="pl-2 pr-2 font-instrument font-medium drop-shadow-xs md:text-right"
+          className="pl-2 pr-2 font-instrument font-normal drop-shadow-xs md:text-right tracking-[-0.01em] leading-none"
           dangerouslySetInnerHTML={{
             __html: lineTwo,
           }}
@@ -127,7 +127,7 @@ export const HeroV1 = ({
       "data-theme": theme,
     }}
   >
-    <div className="w-full xl:min-h-[60rem] h-screen xl:max-h-[64rem] m-auto max-w-6xl">
+    <div className="w-full xl:min-h-[60rem] h-screen xl:max-h-[64rem] m-auto max-w-6xl px-2">
       {lineOne && (
         // <h1 className="pl-2 pt-84 font-instrument tracking-[-0.01em] leading-none text-8xl">
         //   <AnimatedLines text={lineOne} />
@@ -135,7 +135,7 @@ export const HeroV1 = ({
         <Text
           as="h1"
           scale="h1"
-          className="pl-2 pt-56 md:pt-64 lg:pt-72 xl:pt-84 font-instrument font-medium drop-shadow-xs"
+          className="pl-2 pt-56 md:pt-64 lg:pt-72 xl:pt-84 font-instrument font-medium drop-shadow-xs tracking-[-0.01em] leading-none"
           dangerouslySetInnerHTML={{
             __html: lineOne,
           }}
@@ -148,7 +148,7 @@ export const HeroV1 = ({
         <Text
           as="h1"
           scale="h1"
-          className="pl-2 pr-2 font-instrument font-medium drop-shadow-xs md:text-right"
+          className="pl-2 pr-2 font-instrument font-medium drop-shadow-xs md:text-right tracking-[-0.01em] leading-none"
           dangerouslySetInnerHTML={{
             __html: lineTwo,
           }}
@@ -215,7 +215,7 @@ export const HeroV2 = ({
         <Text
         as="h1"
         scale="h1"
-        className="pl-2 pt-56 md:pt-64 lg:pt-72 xl:pt-84 font-instrument font-medium drop-shadow-xs"
+        className="pl-2 pt-56 md:pt-64 lg:pt-72 xl:pt-84 font-instrument font-medium drop-shadow-xs tracking-[-0.01em] leading-none"
         dangerouslySetInnerHTML={{
           __html: lineOne,
         }}
@@ -228,7 +228,7 @@ export const HeroV2 = ({
         <Text
         as="h1"
         scale="h1"
-        className="pl-2 pr-2 font-instrument font-medium drop-shadow-xs md:text-right"
+        className="pl-2 pr-2 font-instrument font-medium drop-shadow-xs md:text-right tracking-[-0.01em] leading-none"
         dangerouslySetInnerHTML={{
           __html: lineTwo,
         }}

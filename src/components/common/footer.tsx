@@ -9,11 +9,11 @@ export const Footer = ({ theme = "dark" }) => (
     className="text-[#4A1A51] bg-[#FAFAFA] dark:text-[#FAFAFA] dark:bg-[#4A1A51]"
     data-theme={theme}
   >
-    <div className="w-full h-full m-auto max-w-6xl">
+    <div className="w-full h-full m-auto max-w-6xl px-2">
       <Guides />
     </div>
     <div className="flex flex-col">
-      <div className="w-full h-full m-auto max-w-6xl py-32 grid grid-cols-1 md:grid-cols-4">
+      <div className="w-full h-full m-auto max-w-6xl px-2 py-32 grid grid-cols-1 md:grid-cols-4">
         <div className="md:col-start-1 md:col-span-2">
           <Link href="/" className="flex flex-col">
             <PHPLogo className="ml-2 h-20 w-20" />

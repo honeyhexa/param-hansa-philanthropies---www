@@ -92,37 +92,45 @@ export default function AboutPage() {
       </Section>
       <Section>
         <div className="pt-28 md:pt-40 lg:pt-52 xl:pt-64 grid grid-cols-4 text-dark">
-          <Text as="h3" scale="h3" className="col-start-1 col-span-4 px-2 text-pretty">
+          <Text as="h3" scale="h3" className="col-start-1 col-span-4 px-2 pb-16 text-pretty">
             Meet our leadership
           </Text>
         </div>
-        <div className="flex flex-col col-start-1 col-span-4">
+        {/* <div className="flex flex-col col-start-1 col-span-4">
           <Image
             alt="dheeraj quote"
             className="p-16"
-            src="/dheeraj-quote.png"
-            width={3368}
-            height={2217}
+            unoptimized
+            src="/ds-01.png"
+            width={4000}
+            height={3000}
           />
-        </div>
+        </div> */}
         <div className="grid grid-cols-2">
+        <div className="flex flex-col">
+            <ProgressiveBlurBasic
+              imgSrc="/about-ds-02.png"
+              name="Dheeraj & Swapna Pandey"
+              role="Co-Founder"
+            />
+          </div>
           <div className="flex flex-col">
             <ProgressiveBlurBasic
-              imgSrc="/amit-kumar-01.webp"
+              imgSrc="/about-amit-02.png"
               name="Amit Kumar"
               role="Co-Founder"
             />
           </div>
           <div className="flex flex-col">
             <ProgressiveBlurBasic
-              imgSrc="/rakesh-kumar-01.webp"
+              imgSrc="/about-rakesh-02.png"
               name="Rakesh Kumar"
               role="Director"
             />
           </div>
           <div className="flex flex-col">
             <ProgressiveBlurBasic
-              imgSrc="/adarsh-das-01.webp"
+              imgSrc="/about-adarsh-02.png"
               name="Adarsh Das"
               role="Director"
             />
@@ -136,21 +144,21 @@ export default function AboutPage() {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function ProgressiveBlurBasic(o: any) {
   return (
-    <div className="border border-zinc-500/20 relative aspect-square w-full overflow-hidden rounded-[4px]">
+    <div className="relative aspect-square w-full overflow-hidden">
       <Image
         src={o.imgSrc}
         alt={o.name}
-        className="absolute inset-0 bg-white object-cover"
+        className="absolute inset-0 object-cover"
         height="2100"
         width="1800"
       />
       <ProgressiveBlur
-        className="pointer-events-none absolute bottom-0 left-0 h-[25%] w-full"
+        className="m-1 pointer-events-none absolute bottom-0 left-0 h-[35%] w-full"
         blurIntensity={2}
       />
       <div className="absolute bottom-0 left-0 text-dark">
         <div className="flex flex-col items-start gap-0 px-5 py-1 md:py-4">
-          <Text as="p" scale="p1" className="drop-shadow-sm">
+          <Text as="p" scale="p1" className="drop-shadow-xs">
             {o.name}
           </Text>
           <Text as="p" scale="p2" className="md:mb-2 text-zinc-800/80">{o.role}</Text>
