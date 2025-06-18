@@ -106,12 +106,12 @@ export default function AboutPage() {
             height={3000}
           />
         </div> */}
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2">
         <div className="flex flex-col">
             <ProgressiveBlurBasic
               imgSrc="/about-ds-02.png"
               name="Dheeraj & Swapna Pandey"
-              role="Co-Founder"
+              role="Founders"
             />
           </div>
           <div className="flex flex-col">

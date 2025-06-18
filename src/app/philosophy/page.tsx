@@ -24,7 +24,7 @@ export default function Philosophy() {
         lineTwo={`atoms and spirit converge.`}
         theme="light"
       />
-      <ZStack>
+      {/* <ZStack>
         <video
           className="-mt-32 m-auto"
           src="/meditate.mp4"
@@ -34,21 +34,21 @@ export default function Philosophy() {
         />
         <div className="-mt-32 m-auto h-64 bg-linear-to-b from-[#FAFAFA] to-transparent"></div>
         <div className="-mt-64 m-auto h-32 bg-linear-to-t from-[#FAFAFA] to-transparent"></div>
-      </ZStack>
+      </ZStack> */}
 
       <ZStack>
         <div className="w-full h-full m-auto max-w-6xl">
           <Guides></Guides>
         </div>
-        <div className="-mt-0 h-32 bg-linear-to-b from-[#FAFAFA] to-transparent"></div>
-        <div className="-mt-32 h-32 bg-linear-to-t from-[#FAFAFA] to-transparent"></div>
+        {/* <div className="-mt-0 h-32 bg-linear-to-b from-[#FAFAFA] to-transparent"></div>
+        <div className="-mt-32 h-32 bg-linear-to-t from-[#FAFAFA] to-transparent"></div> */}
         <div className="w-full m-auto max-w-6xl">
           <div className="text-dark">
             {/* <AnimatedLines
               className="px-2 pr-12 py-32 text-[#4A1A51]"
               text="Meet our four pillars that don’t just guide us — they define us, they’re the gears of our operating system."
             /> */}
-            <Text as="h2" scale="h3" className="px-2 pr-12 py-32 ">
+            <Text as="h2" scale="h3" className="px-2 pr-12 pb-32 ">
             Meet our four pillars that don’t just guide us — they define us, they’re the gears of our operating system.
             </Text>
           </div>
@@ -63,16 +63,16 @@ export default function Philosophy() {
                 className="group grid grid-cols-8 h-32 border-b border-x border-x-zinc-500/20 border-b-zinc-500/20 first:border-t-zinc-500/20 first:border-t bg-[#FAFAFA] hover:bg-[#4A1A51] transition ease-in-out"
                 key={i}
               >
-                <th className="flex flex-col items-start justify-center">
+                <th className="hidden md:col-start-1 md:col-span-1 flex flex-col items-start justify-center">
                   <span className="ml-8 h-3 w-3 rounded-full bg-zinc-200" />
                 </th>
-                <th className="col-start-2 col-span-1 flex items-center justify-start text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-schibsted font-normal text-2xl leading-[1.2] -ml-8 ">
-                  <span className={inknutAntiqua.className}>{o.value}</span>
+                <th className={`col-start-2 col-span-3 md:col-start-2 md:col-span-1 flex items-center justify-start text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-schibsted font-normal text-2xl leading-[1.2] -ml-8 ${inknutAntiqua.className} `}>
+                  {o.value}
                 </th>
-                <th className="col-start-3 col-span-1 flex items-center justify-start text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-instrument italic font-normal text-4xl leading-[1.2] ml-8">
+                <th className="col-start-5 col-span-4 md:col-start-3 md:col-span-1 flex items-center justify-start text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-instrument italic font-normal text-4xl leading-[1.2] ml-8">
                   {o.name}
                 </th>
-                <th className="col-start-5 col-span-3 flex items-center justify-start text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2] ml-8">
+                <th className="col-start-1 col-span-8 md:col-start-5 md:col-span-3 flex items-center justify-start text-left text-[#4A1A51] group-hover:text-[#FAFAFA] font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2] ml-4">
                   {o.description}
                 </th>
                 <th></th>
