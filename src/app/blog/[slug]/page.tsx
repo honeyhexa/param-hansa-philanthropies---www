@@ -9,6 +9,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-dynamic";
+
+export const revalidate = 0;
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function ArticlePage(props: any) {
   const params = await props.params;
