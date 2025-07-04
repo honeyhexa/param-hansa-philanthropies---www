@@ -65,22 +65,18 @@ export default async function ArticlePage(props: any) {
       {/* eslint-disable-next-line @typescript-eslint/no-explicit-any */}
       {work.sections?.map((o: any, i: number) => (
         <Section key={i} guides={false}>
-          <div className="w-full border-x border-x-zinc-500/20 border-b border-b-zinc-500/20 grid grid-cols-2 lg:grid-cols-4 pt-16 pb-32 bg-[#FAFAFA]">
-            <div className="hidden lg:block px-4 pt-8 sticky top-32 h-20 col-span-2 text-5xl text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em]">
-              Initiative and story forward
-            </div>
-            <div
-              className={`
-              col-span-2 px-4 
-          [&>h2]:py-12 [&>h2]:text-3xl [&>h2]:text-[#4A1A51] [&>h2]:font-schibsted [&>h2]:font-semibold [&>h2]:tracking-[-0.04em]
-          [&>h3]:py-8 [&>h3]:text-xl [&>h3]:text-[#4A1A51] [&>h3]:font-schibsted [&>h3]:font-semibold [&>h3]:tracking-[-0.02em]
-          [&>p]:pb-0 [&>p]:text-lg [&>p]:text-[#4A1A51]/90 [&>p]:font-schibsted [&>p]:font-medium [&>p]:tracking-[-0.02em] [&>p]:leading-7
-          [&>ul]:list-disc [&>ul]:ml-5 [&>ul>li]:py-2 [&>ul>li]:text-lg [&>ul>li]:text-[#4A1A51]/90 [&>ul>li]:font-schibsted [&>ul>li]:font-medium [&>ul>li]:tracking-[-0.02em] [&>ul>li]:leading-7
+          <div className="w-full m-auto max-w-xl pb-32 bg-[#FAFAFA] border-x border-x-4 border-x-[#FAFAFA] ">
+          <div
+            className={`px-2 
+          [&>h2]:my-12 [&>h2]:text-3xl [&>h2]:text-[#4A1A51] [&>h2]:font-schibsted [&>h2]:font-semibold [&>h2]:tracking-[-0.04em]
+          [&>h3]:my-8 [&>h3]:text-xl [&>h3]:text-[#4A1A51] [&>h3]:font-schibsted [&>h3]:font-semibold [&>h3]:tracking-[-0.02em]
+          [&>p]:my-0 [&>p]:text-base [&>p]:text-[#4A1A51]/90 [&>p]:font-schibsted [&>p]:font-medium [&>p]:tracking-[-0.02em] [&>p]:leading-7
+          [&>ul]:list-disc [&>ul]:ml-5 [&>ul>li]:pb-2 [&>ul>li]:text-base [&>ul>li]:text-[#4A1A51]/90 [&>ul>li]:font-schibsted [&>ul>li]:font-medium [&>ul>li]:tracking-[-0.02em] [&>ul>li]:leading-7
           `}
-            >
-              <BlockContent value={o.body} />
-            </div>
+          >
+            <BlockContent value={o.body} />
           </div>
+        </div>
         </Section>
       ))}
     </Page>
