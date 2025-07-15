@@ -19,7 +19,7 @@ export const postQuery = defineQuery(`
   `);
 
 export const allPostsQuery = defineQuery(`
-    *[_type == "post" && defined(slug.current)] | order(date desc, _updatedAt desc) {
+    *[_type == "post" && defined(slug.current) && skipListing == false] | order(date desc, _updatedAt desc) {
       ${postFields}
     }
   `);

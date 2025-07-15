@@ -19,6 +19,13 @@ export const postType = defineType({
       },
     }),
     defineField({
+      name: 'skipListing',
+      title: 'Skip listing this article',
+      type: 'boolean',
+      initialValue: false,
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: 'author',
       type: 'reference',
       to: {type: 'author'},
@@ -45,6 +52,12 @@ export const postType = defineType({
     defineField({
       name: 'publishedAt',
       type: 'datetime',
+      initialValue: new Date().toISOString(),
+    }),
+    defineField({
+      name: 'lastUpdatedAt',
+      type: 'datetime',
+      initialValue: new Date().toISOString(),
     }),
     defineField({
       name: 'body',

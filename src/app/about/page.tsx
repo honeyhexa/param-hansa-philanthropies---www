@@ -1,7 +1,8 @@
 import { Text } from "@/components/common";
 import { Page } from "@/components/common/page";
+// import { MorphingDialogBasicOne } from "@/components/misc/modal";
 import Section from "@/components/misc/section";
-import { ProgressiveBlur } from "@/components/motion-primitives/progressive-blur";
+// import { ProgressiveBlur } from "@/components/motion-primitives/progressive-blur";
 import { HeroV1 } from "@/components/sections/hero/pages";
 import Image from "next/image";
 
@@ -92,7 +93,11 @@ export default function AboutPage() {
       </Section>
       <Section>
         <div className="pt-28 md:pt-40 lg:pt-52 xl:pt-64 grid grid-cols-4 text-dark">
-          <Text as="h3" scale="h3" className="col-start-1 col-span-4 px-2 pb-16 text-pretty">
+          <Text
+            as="h3"
+            scale="h3"
+            className="col-start-1 col-span-4 px-2 pb-16 text-pretty"
+          >
             Meet our leadership
           </Text>
         </div>
@@ -107,7 +112,12 @@ export default function AboutPage() {
           />
         </div> */}
         <div className="grid grid-cols-1 md:grid-cols-2">
-        <div className="flex flex-col">
+        {/* <div className="flex flex-col">
+          <MorphingDialogBasicOne imgSrc="/about-ds-02.png"
+              name="Dheeraj & Swapna Pandey"
+              role="Founders" />
+        </div> */}
+          <div className="flex flex-col">
             <ProgressiveBlurBasic
               imgSrc="/about-ds-02.png"
               name="Dheeraj & Swapna Pandey"
@@ -152,16 +162,18 @@ function ProgressiveBlurBasic(o: any) {
         height="2100"
         width="1800"
       />
-      <ProgressiveBlur
+      {/* <ProgressiveBlur
         className="m-1 pointer-events-none absolute bottom-0 left-0 h-[35%] w-full"
         blurIntensity={2}
-      />
+      /> */}
       <div className="absolute bottom-0 left-0 text-dark">
         <div className="flex flex-col items-start gap-0 px-5 py-1 md:py-4">
           <Text as="p" scale="p1" className="drop-shadow-xs">
             {o.name}
           </Text>
-          <Text as="p" scale="p2" className="md:mb-2 text-zinc-800/80">{o.role}</Text>
+          <Text as="p" scale="p2" className="md:mb-2 text-zinc-800/80">
+            {o.role}
+          </Text>
         </div>
       </div>
     </div>
