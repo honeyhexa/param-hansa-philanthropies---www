@@ -65,19 +65,30 @@ export default function Home() {
           <Text
             as="h2"
             scale="h3"
-            className="pl-2 pr-8 py-8 md:py-16 lg:py-24 xl:py-32 text-pretty"
+            className="pl-2 pr-8 pt-8 md:pt-16 lg:pt-24 xl:pt-32 text-pretty"
             // className="px-2 py-32 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
           >
-            Param Hansa Philanthropies fuels discoveries that transcend
-            disciplines at the convergence of computing and life sciences. We
-            don’t follow trends—we build bridges to a future where technology
-            serves life itself.
+            Partnerships and collaborations with universities and research
+            organizations to foster efforts in the computing + life sciences
+            arena.
           </Text>
+          <div className="pt-4 md:pt-4 lg:pt-8 xl:pt-16 grid grid-cols-4">
+            <Link
+              href="/about"
+              className="group col-start-1 col-span-1 bg-white"
+            >
+              <div className=" text-[#4A1A51] group-hover:text-[#183FF5] flex flex-row items-center justify-between px-2 py-4 border border-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
+                <>
+                  Who we are <ArrowRight className="h-8 mr-4" />
+                </>
+              </div>
+            </Link>
+          </div>
         </div>
       </Section>
 
-      <Section>
-        <div className="grid grid-cols-4 text-[#4A1A51] ">
+      {/* <Section> */}
+        {/* <div className="grid grid-cols-4 text-[#4A1A51] ">
           <div className="col-start-1 col-span-4 md:col-start-3 md:col-span-2 border-t border-t-zinc-500/20 px-2">
             <Text as="p" className="bg-light pt-8 pb-16" scale="p1">
               Through strategic partnerships and grant-making, we have enabled
@@ -92,8 +103,8 @@ export default function Home() {
               boundaries of scientific knowledge.
             </Text>
           </div>
-        </div>
-        <div className="mt-16 grid grid-cols-4">
+        </div> */}
+        {/* <div className="mt-16 grid grid-cols-4">
           <Link
             href="/apply"
             className="group col-start-1 col-span-2 md:col-start-3 md:col-span-1 bg-white"
@@ -104,35 +115,47 @@ export default function Home() {
               </>
             </div>
           </Link>
-        </div>
-      </Section>
+        </div> */}
+      {/* </Section> */}
 
       <Section>
         <div className="text-dark">
           <Text
             as="h2"
             scale="h3"
-            className="pl-2 pr-8 py-8 md:py-16 lg:py-24 xl:py-32 text-pretty"
+            className="pl-2 pr-8 pt-8 md:pt-16 lg:pt-24 xl:pt-32 text-pretty"
             // className="px-2 py-64 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
           >
-            Our work creates ripples of progress, measurable impact through
-            innovative research and powerful collaborations with leading
-            institutions.
+            Playing a catalytic role in strengthening interdisciplinary and
+            interinstitutional research collaborations that bring AI, compute,
+            tech and natural sciences together for the translational impact.
           </Text>
+          <div className="pt-4 md:pt-4 lg:pt-8 xl:pt-16 grid grid-cols-4">
+            <Link
+              href="/work"
+              className="group col-start-1 col-span-1 bg-white"
+            >
+              <div className=" text-[#4A1A51] group-hover:text-[#183FF5] flex flex-row items-center justify-between px-2 py-4 border border-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
+                <>
+                  What we do <ArrowRight className="h-8 mr-4" />
+                </>
+              </div>
+            </Link>
+          </div>
 
-          <div className="pb-32 grid grid-cols-2 md:grid-cols-4">
+          <div className="pt-4 md:pt-4 lg:pt-8 xl:pt-16  pb-32 grid grid-cols-2 md:grid-cols-4">
             {[...LOGOS].map((o, i) =>
               o ? (
                 <ZStack className="group border border-zinc-500/20" key={i}>
-                  <div className="aspect-square p-6 flex flex-col items-center justify-center text-[#4A1A51] bg-white group-hover:text-[#FAFAFA] transition ease-in-out">
+                  <Link href={o.value} className="aspect-square p-6 flex flex-col items-center justify-center text-[#4A1A51] bg-white group-hover:text-[#FAFAFA] transition ease-in-out">
                     <Image
-                      className="grayscale "
+                      className="grayscale"
                       alt="logo"
                       src={o.src}
                       height={120}
                       width={160}
                     />
-                  </div>
+                  </Link>
                 </ZStack>
               ) : (
                 <ZStack className="" key={i}>

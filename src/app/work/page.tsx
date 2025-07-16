@@ -32,9 +32,9 @@ export default async function Work() {
             text="Our work creates ripples of progress, measurable impact through innovative research and powerful collaborations with leading institutions."
           /> */}
           <Text as="h2" scale="h3" className="text-pretty pl-2 pr-8 py-32">
-            Our work creates ripples of progress, measurable impact through
-            innovative research and powerful collaborations with leading
-            institutions.
+            Playing a catalytic role in strengthening interdisciplinary and
+            interinstitutional research collaborations that bring AI, compute,
+            tech and natural sciences together for the translational impact.
           </Text>
           <div className="grid grid-cols-2 md:grid-cols-4 bg-[#FAFAFA]">
             <AnimatedBackground
@@ -94,9 +94,11 @@ export default async function Work() {
           /> */}
 
           <Text as="h2" scale="h3" className="text-pretty pl-2 pr-16 py-32">
-            We are committed to supporting research initiatives with esteemed
-            institutions, universities, and cutting-edge laboratories to drive
-            progress at the intersection of computing and life sciences.
+            Choosing to remain as a grant making institution, the partnerships
+            are key to our long-term vision. We believe that power of compute
+            and emerging bio technology, combined with wet lab data and clinical
+            research, can make life sciences research significantly more
+            efficient and in turn, enhance human health.
           </Text>
 
           <table className="w-full">
