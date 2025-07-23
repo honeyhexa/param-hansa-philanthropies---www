@@ -28,10 +28,12 @@ export default function AboutPage() {
             scale="h3"
             className="col-start-1 col-span-4 px-2 pb-20 md:pb-24 lg:pb-28 xl:pb-32"
           >
-            Param Hansa Philanthropies (PHP) is Dheeraj and Swapna Pandey&apos;s
+            Cofounded by Dheeraj & Swapna Pandey, Param Hansa Philanthropies is a grant making foundation supporting innovations, scientific research partnerships, and translational efforts in computational biology.
+
+            {/* Param Hansa Philanthropies (PHP) is Dheeraj and Swapna Pandey&apos;s
             private foundation registered under Section 501(c)(3) of US Internal
             Revenue Code aiming at improving human life through application of
-            science and technology.
+            science and technology. */}
           </Text>
         </div>
       </Section>
@@ -50,9 +52,13 @@ export default function AboutPage() {
               scale="p1"
               className="bg-[#FAFAFA] text-zinc-500 pt-8 pb-16"
             >
-              Param Hansa Philanthropies Foundation (PHPF) India is registered
+              Param Hansa Philanthropies (PHP) is a private foundation registered under Section 501(c)(3) of US Internal Revenue Code aiming at improving human life through application of science and technology.
+              
+              {/* Param Hansa Philanthropies (PHP) is registered under 501(c)(3) US IRS. */}
+
+              {/* Param Hansa Philanthropies Foundation (PHPF) India is registered
               as a Section 8 Non-Profit Company and the implementing partner of
-              PHP USA.
+              PHP USA. */}
             </Text>
           </div>
         </div>
@@ -91,6 +97,17 @@ export default function AboutPage() {
           </div>
         </div>
       </Section>
+      <Section>
+        <div className="pt-28 md:pt-40 lg:pt-52 xl:pt-64 grid grid-cols-4 text-dark">
+          <Text
+            as="h3"
+            scale="h3"
+            className="col-start-1 col-span-4 px-2 pb-16 text-pretty"
+          >
+            Timeline
+          </Text>
+        </div>
+        </Section>
       <Section>
         <div className="pt-28 md:pt-40 lg:pt-52 xl:pt-64 grid grid-cols-4 text-dark">
           <Text

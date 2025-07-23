@@ -13,8 +13,8 @@ export const NewsLetter = ({ theme = "light" }) => (
     <div className="flex flex-col">
       <div className="w-full h-full m-auto max-w-6xl py-40 border-t border-t-zinc-500/20">
         <Text as="p" scale="h3" className="pl-2 text-balance">
-          Stay ahead of the curve. <br />
-          Monthly insights on AI, genomics and ethical progress.
+        Connect with us to join the network of the global scientific community. 
+
         </Text>
 
         <div className="mt-16 grid grid-cols-4">

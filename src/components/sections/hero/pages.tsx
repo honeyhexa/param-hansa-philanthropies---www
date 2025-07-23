@@ -49,7 +49,7 @@ export const HeroV0 = ({
         // </h1>
         <Text
           as="h1"
-          scale="h1"
+          scale="h2"
           className="pl-2 pt-56 md:pt-64 lg:pt-72 xl:pt-84 font-instrument font-normal drop-shadow-xs tracking-[-0.01em] leading-none"
           dangerouslySetInnerHTML={{
             __html: lineOne,
@@ -62,7 +62,7 @@ export const HeroV0 = ({
         // </h1>
         <Text
           as="h1"
-          scale="h1"
+          scale="h2"
           className="pl-2 pr-2 font-instrument font-normal drop-shadow-xs md:text-right tracking-[-0.01em] leading-none"
           dangerouslySetInnerHTML={{
             __html: lineTwo,
@@ -70,13 +70,10 @@ export const HeroV0 = ({
         />
       )}
       <div className="mt-32 grid grid-cols-4">
-        <p className="pl-2 font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2] col-start-1 col-span-2 md:col-start-3 md:col-span-1 lowercase">
-          Synthetic Cells, <br />
-          Sacred Code
-        </p>
-        <p className="pl-2 font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2] col-start-3 col-span-2 md:col-start-4 md:col-span-1 lowercase">
-          Engineering Life <br />
-          with Integrity.
+        <p className="pl-2 font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2] col-start-3 col-span-2 lowercase">
+          Supporting ideas that harness the revolutionary power of tech to
+          capture new frontiers in healthcare, and enhance the quality of human
+          life.
         </p>
       </div>
 
@@ -155,6 +152,14 @@ export const HeroV1 = ({
         />
       )}
       <div className="mt-32 grid grid-cols-4">
+        <p className="pl-2 font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2] col-start-3 col-span-2 lowercase">
+          Paramhansa Yogananda’s timeless teachings remind us that true progress
+          harmonizes the material and the divine. At param hansa philanthropies,
+          we channel his wisdom to ensure technology serves not just humanity,
+          but the sanctity of life itself.
+        </p>
+      </div>
+      {/* <div className="mt-32 grid grid-cols-4">
         <p className="pl-2 font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2] col-start-1 col-span-2 md:col-start-3 md:col-span-1 lowercase">
           Synthetic Cells, <br />
           Sacred Code
@@ -163,7 +168,7 @@ export const HeroV1 = ({
           Engineering Life <br />
           with Integrity.
         </p>
-      </div>
+      </div> */}
 
       <div className="mt-32 grid grid-cols-4">
         {primaryCTA && (
@@ -213,26 +218,26 @@ export const HeroV2 = ({
         //   <AnimatedLines text={lineOne} />
         // </h1>
         <Text
-        as="h1"
-        scale="h1"
-        className="pl-2 pt-56 md:pt-64 lg:pt-72 xl:pt-84 font-instrument font-medium drop-shadow-xs tracking-[-0.01em] leading-none"
-        dangerouslySetInnerHTML={{
-          __html: lineOne,
-        }}
-      />
+          as="h1"
+          scale="h1"
+          className="pl-2 pt-56 md:pt-64 lg:pt-72 xl:pt-84 font-instrument font-medium drop-shadow-xs tracking-[-0.01em] leading-none"
+          dangerouslySetInnerHTML={{
+            __html: lineOne,
+          }}
+        />
       )}
       {lineTwo && (
         // <h1 className="pr-2 font-instrument tracking-[-0.01em] leading-none text-8xl text-right">
         //   <AnimatedLines animationDelay={0.07} text={lineTwo} />
         // </h1>
         <Text
-        as="h1"
-        scale="h1"
-        className="pl-2 pr-2 font-instrument font-medium drop-shadow-xs md:text-right tracking-[-0.01em] leading-none"
-        dangerouslySetInnerHTML={{
-          __html: lineTwo,
-        }}
-      />
+          as="h1"
+          scale="h1"
+          className="pl-2 pr-2 font-instrument font-medium drop-shadow-xs md:text-right tracking-[-0.01em] leading-none"
+          dangerouslySetInnerHTML={{
+            __html: lineTwo,
+          }}
+        />
       )}
       <div className="mt-32 grid grid-cols-4">
         <p className="pl-2 font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2] col-start-3 col-span-2 lowercase">

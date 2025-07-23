@@ -22,7 +22,7 @@ export const Footer = ({ theme = "dark" }) => (
               <span className="opacity-50">Philanthropies</span>
             </p>
             <p className="pl-2 pt-8 pb-16 font-instrument text-xl">
-              Supporting research where compute meets life.
+            Catalyzing health innovation through tech and translational research.
             </p>
           </Link>
         </div>
@@ -63,11 +63,11 @@ export const Footer = ({ theme = "dark" }) => (
         <div className="flex flex-col md:col-start-4 md:col-span-1">
           <ul className="pl-2 font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.0] *:py-3">
             <li className="opacity-50">Socials</li>
-            <li>FaceBook</li>
             <li>LinkedIn</li>
-            <li>Youtube</li>
-            <li>Instagram</li>
             <li>X (formerly twitter)</li>
+            <li>Youtube</li>
+            <li>FaceBook</li>
+            <li>Instagram</li>
           </ul>
         </div>
         <div className="mt-16 flex flex-col items-start justify-start md:col-start-3 md:col-span-1">
