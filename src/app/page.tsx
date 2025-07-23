@@ -13,12 +13,12 @@ export default function Home() {
   return (
     <Page>
       <HeroV0
-        lineOne={`Supporting <i>research</i>`}
-        lineTwo={`where compute meets life.`}
+        lineOne={`<i>Catalyzing health innovation</i>`}
+        lineTwo={`<i>through tech and translational research.</i>`}
         primaryCTA={{
           label: (
             <>
-              Who we are <ArrowRight className="h-8 mr-4" />
+              QxBio <ArrowRight className="h-8 mr-4" />
             </>
           ),
           href: "/about",
@@ -26,7 +26,7 @@ export default function Home() {
         secondaryCTA={{
           label: (
             <>
-              What we do <ArrowRight className="h-8 mr-4" />
+              Resources <ArrowRight className="h-8 mr-4" />
             </>
           ),
           href: "/work",
@@ -39,7 +39,7 @@ export default function Home() {
           gap={24}
         >
           <Text scale="h1">
-            Progress should serve humanity, not just speed.{" "}
+          Investing into future for a better tomorrow.{" "}
           </Text>
         </InfiniteSlider>
       </Section>
@@ -68,11 +68,13 @@ export default function Home() {
             className="pl-2 pr-8 pt-8 md:pt-16 lg:pt-24 xl:pt-32 text-pretty"
             // className="px-2 py-32 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
           >
-            Partnerships and collaborations with universities and research
+            In science we unite, in health we grow.
+
+            {/* Partnerships and collaborations with universities and research
             organizations to foster efforts in the computing + life sciences
-            arena.
+            arena. */}
           </Text>
-          <div className="pt-4 md:pt-4 lg:pt-8 xl:pt-16 grid grid-cols-4">
+          {/* <div className="pt-4 md:pt-4 lg:pt-8 xl:pt-16 grid grid-cols-4">
             <Link
               href="/about"
               className="group col-start-1 col-span-1 bg-white"
@@ -83,40 +85,39 @@ export default function Home() {
                 </>
               </div>
             </Link>
-          </div>
+          </div> */}
         </div>
       </Section>
 
-      {/* <Section> */}
-        {/* <div className="grid grid-cols-4 text-[#4A1A51] ">
-          <div className="col-start-1 col-span-4 md:col-start-3 md:col-span-2 border-t border-t-zinc-500/20 px-2">
+      <Section>
+        <div className="grid grid-cols-4 text-[#4A1A51] pt-4 md:pt-4 lg:pt-8 xl:pt-16 ">
+          <div className="col-start-1 col-span-4 md:col-start-3 md:col-span-2 border-t border-t-zinc-500/20 border-b border-b-zinc-500/20 px-2">
             <Text as="p" className="bg-light pt-8 pb-16" scale="p1">
-              Through strategic partnerships and grant-making, we have enabled
-              significant advancements in computational oncology, contributing
-              to research & development in fight against cancer.
+            We support ideas that harness the revolutionary power of tech to capture new frontiers in healthcare, and enhance the quality of human life.
+
             </Text>
           </div>
-          <div className="col-start-1 col-span-4 md:col-start-3 md:col-span-2 border-t border-t-zinc-500/20 px-2 border-b border-b-zinc-500/20">
+          {/* <div className="col-start-1 col-span-4 md:col-start-3 md:col-span-2 border-t border-t-zinc-500/20 px-2 border-b border-b-zinc-500/20">
             <Text as="p" className="bg-light pt-8 pb-16" scale="p1">
               Additionally, by supporting young scientists, we are nurturing the
               next generation of innovators who will continue to push the
               boundaries of scientific knowledge.
             </Text>
-          </div>
-        </div> */}
-        {/* <div className="mt-16 grid grid-cols-4">
+          </div> */}
+        </div>
+        <div className="mt-16 grid grid-cols-4">
           <Link
             href="/apply"
             className="group col-start-1 col-span-2 md:col-start-3 md:col-span-1 bg-white"
           >
             <div className=" text-[#4A1A51] group-hover:text-[#183FF5] flex flex-row items-center justify-between px-2 py-4 border border-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
               <>
-                Get Involved <ArrowRight className="h-8 mr-4" />
+              Who we are <ArrowRight className="h-8 mr-4" />
               </>
             </div>
           </Link>
-        </div> */}
-      {/* </Section> */}
+        </div>
+      </Section>
 
       <Section>
         <div className="text-dark">
@@ -126,9 +127,8 @@ export default function Home() {
             className="pl-2 pr-8 pt-8 md:pt-16 lg:pt-24 xl:pt-32 text-pretty"
             // className="px-2 py-64 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
           >
-            Playing a catalytic role in strengthening interdisciplinary and
-            interinstitutional research collaborations that bring AI, compute,
-            tech and natural sciences together for the translational impact.
+            Building global research partnerships that harmonize science, scientists, and innovation to advance human health.
+
           </Text>
           <div className="pt-4 md:pt-4 lg:pt-8 xl:pt-16 grid grid-cols-4">
             <Link
