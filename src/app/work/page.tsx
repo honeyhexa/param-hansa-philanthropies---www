@@ -24,6 +24,7 @@ export default async function Work() {
       <HeroV1
         lineOne={`Discoveries that <i>matter,</i>`}
         lineTwo={`collaborations that <i>multiply.</i>`}
+        theme="light"
       />
       <Section>
         <div className="text-dark">

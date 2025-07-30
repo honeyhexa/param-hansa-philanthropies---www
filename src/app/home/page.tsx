@@ -3,7 +3,7 @@ import { Page } from "@/components/common/page";
 import { ZStack } from "@/components/misc";
 import Section from "@/components/misc/section";
 import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
-import { HeroV3 } from "@/components/sections/hero/pages";
+import { HeroV4 } from "@/components/sections/hero/pages";
 import { LOGOS } from "@/content/home";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
@@ -12,9 +12,9 @@ import Link from "next/link";
 export default function Home() {
   return (
     <Page headerProps={{ theme: "light" }}>
-      <HeroV3
-        lineOne={`Catalyzing health innovation`}
-        lineTwo={`through tech and translational research`}
+      <HeroV4
+        lineOne={`Supporting research`}
+        lineTwo={`where compute meets life`}
         theme="light"
         primaryCTA={{
           label: (

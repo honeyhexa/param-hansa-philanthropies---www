@@ -1,4 +1,4 @@
-import { Cursor } from "@/components/motion-primitives/cursor";
+// import { Cursor } from "@/components/motion-primitives/cursor";
 import { Header } from "@/components/common/header";
 import { Footer } from "@/components/common/footer";
 import { NewsLetter } from "@/components/common/newsletter";
@@ -10,7 +10,7 @@ export const Page = ({ headerProps, children }: { headerProps?: any; children: R
     {children}
     <NewsLetter />
     <Footer />
-    <Cursor
+    {/* <Cursor
       variants={{
         initial: { scale: 0.3, opacity: 0 },
         animate: { scale: 1, opacity: 1 },
@@ -23,6 +23,6 @@ export const Page = ({ headerProps, children }: { headerProps?: any; children: R
       className=''
     >
       <div className='h-4 w-4 flex items-center justify-center rounded-[24px] bg-gray-500/40 backdrop-blur-md dark:bg-gray-300/40'></div>
-    </Cursor>
+    </Cursor> */}
   </>
 )

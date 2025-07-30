@@ -12,6 +12,7 @@ export default function AboutPage() {
       <HeroV1
         lineOne="Who we are, why we are,"
         lineTwo="why do we do what we do."
+        theme="light"
       />
       <Section>
         <div className="grid grid-cols-4 pt-28 md:pt-40 lg:pt-52 xl:pt-64 text-dark">
