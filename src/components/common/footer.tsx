@@ -1,10 +1,10 @@
-import { Guides, ZStack } from "@/components/misc";
-import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
-import { PHPLogo } from "./php-logo";
-import Link from "next/link";
-import { Text } from ".";
+import { Guides, ZStack } from '@/components/misc';
+import { InfiniteSlider } from '@/components/motion-primitives/infinite-slider';
+import { PHPLogo } from './php-logo';
+import Link from 'next/link';
+import { Text } from '.';
 
-export const Footer = ({ theme = "dark" }) => (
+export const Footer = ({ theme = 'dark' }) => (
   <ZStack
     className="text-[#4A1A51] bg-[#FAFAFA] dark:text-[#FAFAFA] dark:bg-[#4A1A51]"
     data-theme={theme}
@@ -22,7 +22,8 @@ export const Footer = ({ theme = "dark" }) => (
               <span className="opacity-50">Philanthropies</span>
             </p>
             <p className="pl-2 pt-8 pb-16 font-instrument text-xl">
-            Catalyzing health innovation through tech and translational research.
+              Catalyzing health innovation through tech and translational
+              research.
             </p>
           </Link>
         </div>
@@ -34,46 +35,51 @@ export const Footer = ({ theme = "dark" }) => (
             <span className="px-2"> info@phvalues.org</span>
           </Link>
 
-            <br />
-            <br />
-            <Text as="p" scale="p1" className="px-2 opacity-50">Global Office</Text>
-            <br />
-            <Text as="p" scale="p1" className="px-2">Param Hansa Philanthropies Tampa, Florida - 33558 USA</Text>
-            <br />
-            <br />
-            <br />
-            <Text as="p" scale="p1" className="px-2 opacity-50">India Office</Text>
-            <br />
-          <Text className="px-2" as="p" scale="p1">
+          <br />
+          <br />
+          <br />
+          <Text as="p" scale="p2" className="px-2 opacity-50">
+            Global Office
+          </Text>
+          <br />
+          <Text as="p" scale="p2" className="px-2">
+            Param Hansa Philanthropies Tampa, Florida - 33558 USA
+          </Text>
+          <br />
+          <br />
+          <Text as="p" scale="p2" className="px-2 opacity-50">
+            India Office
+          </Text>
+          <br />
+          <Text className="px-2" as="p" scale="p2">
             Param Hansa Philanthropies Foundation, UrbanVault Indiranagar 608,
             12th Main Road, Indiranagar Bengaluru - 560008, Karnataka INDIA
           </Text>
-          <br/>
-          <br/>
+          <br />
+          <br />
         </div>
         <div className="flex flex-col md:col-start-3 md:col-span-1">
           <ul className="flex flex-col pl-2 font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.0] *:py-3">
             {QUICK_LINKS.map((o, i) => (
-              <Link className="first:opacity-50" key={i} href={o.href ?? "/"}>
+              <Link className="first:opacity-50" key={i} href={o.href ?? '/'}>
                 {o.label}
               </Link>
             ))}
           </ul>
         </div>
         <div className="flex flex-col md:col-start-4 md:col-span-1">
-          <ul className="pl-2 font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.0] *:py-3">
-            <li className="opacity-50">Socials</li>
-            <li>LinkedIn</li>
-            <li>X (formerly twitter)</li>
-            <li>Youtube</li>
-            <li>FaceBook</li>
-            <li>Instagram</li>
+        <ul className="flex flex-col pl-2 font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.0] *:py-3">
+            {SOCIALS.map((o, i) => (
+              <Link className="first:opacity-50" key={i} href={o.href ?? '/'}>
+                {o.label}
+              </Link>
+            ))}
           </ul>
         </div>
         <div className="mt-16 flex flex-col items-start justify-start md:col-start-3 md:col-span-1">
           <ul className="flex flex-col pl-2 font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.0] *:py-3">
             {RESOURCES.map((o, i) => (
-              <Link className="first:opacity-50" key={i} href={o.href ?? "/"}>
+              <Link className="first:opacity-50" key={i} href={o.href ?? '/'}>
                 {o.label}
               </Link>
             ))}
@@ -91,17 +97,22 @@ export const Footer = ({ theme = "dark" }) => (
 );
 
 const QUICK_LINKS = [
-  { label: "Quick Links" },
-  { label: "Our Work", href: "/work" },
-  { label: "Get Involved", href: "/apply" },
-  { label: "Philosophy", href: "/philosophy" },
-  { label: "About Us", href: "/about" },
+  { label: 'Quick Links' },
+  { label: 'Our Work', href: '/work' },
+  { label: 'Get Involved', href: '/apply' },
+  { label: 'Philosophy', href: '/philosophy' },
+  { label: 'About Us', href: '/about' },
 ];
 
 const RESOURCES = [
-  { label: "Resources" },
+  { label: 'Resources' },
   // { label: "Press", href: "/press" },
-  { label: "Blog", href: "/blog" },
+  { label: 'Blog', href: '/blog' },
   // { label: "Documents", href: "/documents" },
   // { label: "Brand", href: "/brand" },
+];
+
+const SOCIALS = [
+  { label: 'Socials' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/company/param-hansa-philanthropies/' },
 ];

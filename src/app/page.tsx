@@ -22,7 +22,7 @@ export default function Home() {
               QxBio <ArrowRight className="h-8 mr-4" />
             </>
           ),
-          href: "/events/qxbio",
+          href: "https://lu.ma/b6ofjbxb",
         }}
         secondaryCTA={{
           label: (
@@ -93,7 +93,7 @@ export default function Home() {
       <Section>
         <div className="grid grid-cols-4 text-[#4A1A51] pt-4 md:pt-4 lg:pt-8 xl:pt-16 ">
           <div className="col-start-1 col-span-4 md:col-start-3 md:col-span-2 border-t border-t-zinc-500/20 border-b border-b-zinc-500/20 px-2">
-            <Text as="p" className="bg-light pt-8 pb-16" scale="p1">
+            <Text as="p" className="bg-light pt-8 pb-16 text-[var(--color-text-secondary)]" scale="p1">
             We support ideas that harness the revolutionary power of tech to capture new frontiers in healthcare, and enhance the quality of human life.
 
             </Text>
@@ -111,7 +111,7 @@ export default function Home() {
             href="/about"
             className="group col-start-1 col-span-2 md:col-start-3 md:col-span-1 bg-white"
           >
-            <div className=" text-[#4A1A51] group-hover:text-[#183FF5] flex flex-row items-center justify-between px-2 py-4 border border-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
+            <div className=" text-[#4A1A51] group-hover:text-[#183FF5] flex flex-row items-center justify-between px-2 py-4 border-x border-x-[0.5px] border-x-zinc-500/20 border-y border-y-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
               <>
               Who we are <ArrowRight className="h-8 mr-4" />
               </>
@@ -136,7 +136,7 @@ export default function Home() {
               href="/work"
               className="group col-start-1 col-span-1 bg-white"
             >
-              <div className=" text-[#4A1A51] group-hover:text-[#183FF5] flex flex-row items-center justify-between px-2 py-4 border border-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
+              <div className=" text-[#4A1A51] group-hover:text-[#183FF5] flex flex-row items-center justify-between px-2 py-4 border-l border-l-zinc-500/20 border-y border-y-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
                 <>
                   What we do <ArrowRight className="h-8 mr-4" />
                 </>

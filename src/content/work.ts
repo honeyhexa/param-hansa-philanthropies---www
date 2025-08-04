@@ -1,11 +1,7 @@
 export const STATS = [
   { label: "Institutional Collaborations", value: "10+" },
-  null,
   { label: "Committed", value: "$20M+" },
-  null,
-  null,
   { label: "Initiatives", value: "15+" },
-  null,
   { label: "Research Publications", value: "10+" },
 ];
 

@@ -15,7 +15,7 @@ export default function AboutPage() {
         theme="light"
       />
       <Section>
-        <div className="grid grid-cols-4 pt-28 md:pt-40 lg:pt-52 xl:pt-64 text-dark">
+        <div className="pt-32 text-dark border-t border-t-zinc-500/20">
           {/* <AnimatedLines
             className="col-start-1 col-span-4 px-2 pb-32 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
             text={`Param Hansa Philanthropies (PHP) is Dheeraj and Swapna Pandey&apos;s
@@ -98,7 +98,7 @@ export default function AboutPage() {
           </div>
         </div>
       </Section>
-      <Section>
+      {/* <Section>
         <div className="pt-28 md:pt-40 lg:pt-52 xl:pt-64 grid grid-cols-4 text-dark">
           <Text
             as="h3"
@@ -108,7 +108,7 @@ export default function AboutPage() {
             Timeline
           </Text>
         </div>
-        </Section>
+        </Section> */}
       <Section>
         <div className="pt-28 md:pt-40 lg:pt-52 xl:pt-64 grid grid-cols-4 text-dark">
           <Text

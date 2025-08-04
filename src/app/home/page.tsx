@@ -13,8 +13,8 @@ export default function Home() {
   return (
     <Page headerProps={{ theme: "light" }}>
       <HeroV4
-        lineOne={`Supporting research`}
-        lineTwo={`where compute meets life`}
+        lineOne={`Catalyzing health innovation`}
+        lineTwo={`through tech and translational research`}
         theme="light"
         primaryCTA={{
           label: (

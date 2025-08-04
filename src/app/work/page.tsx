@@ -27,12 +27,12 @@ export default async function Work() {
         theme="light"
       />
       <Section>
-        <div className="text-dark">
+        <div className="text-dark py-32 text-dark border-y border-y-zinc-500/20">
           {/* <AnimatedLines
             className="text-pretty pl-2 pr-8 py-32 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
             text="Our work creates ripples of progress, measurable impact through innovative research and powerful collaborations with leading institutions."
           /> */}
-          <Text as="h2" scale="h3" className="text-pretty pl-2 pr-8 py-32">
+          <Text as="h2" scale="h3" className="text-pretty pl-2 pr-8 pb-32">
           By uniting science, innovation, and collaboration, we strive to turn breakthrough ideas into lasting impact — improving lives across communities and continents.
 
             {/* Playing a catalytic role in strengthening interdisciplinary and
