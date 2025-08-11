@@ -58,7 +58,7 @@ export default function Home() {
           <Image
             alt="dheeraj quote"
             className="p-8 md:p-8 lg:p-12 xl:p-16"
-            src="/dheeraj-quote.png"
+            src="/dheeraj-quote-02.png"
             width={3368}
             height={2217}
           />

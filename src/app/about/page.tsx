@@ -137,7 +137,7 @@ export default function AboutPage() {
         </div> */}
           <div className="flex flex-col">
             <ProgressiveBlurBasic
-              imgSrc="/about-ds-02.png"
+              imgSrc="/about-ds-03.png"
               name="Dheeraj & Swapna Pandey"
               role="Founders"
             />

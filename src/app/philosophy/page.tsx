@@ -35,7 +35,7 @@ export default function Philosophy() {
         /> */}
         <Image
           src="/yoga-01.png"
-          className="-mt-32 m-auto aspect-video object-cover"
+          className="hidden md:block -mt-32 m-auto aspect-video object-cover"
           width="4000"
           height="2292"
           alt="Param Hansa Yogananda"

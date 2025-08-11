@@ -84,7 +84,7 @@ export default async function ArticlePage() {
                           duration: 0.3,
                           bounce: 0.1,
                         }}
-                        className="overflow-hidden"
+                        className="overflow-hidden hidden md:block"
                         springConfig={{
                           bounce: 0.01,
                         }}

@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 export const Header = ({ theme = 'light' }) => (
   <header
-    className="z-100 fixed w-full border border-zinc-500/20 border-t-transparent bg-[#FAFAFA]/80 dark:bg-[#4A1A51] backdrop-blur-lg dark:[#4A1A51]"
+    className="z-100 fixed w-full border-b border-b-zinc-500/20 border-t-transparent bg-[#FAFAFA]/80 dark:bg-[#4A1A51] backdrop-blur-lg dark:[#4A1A51]"
     data-theme={theme}
   >
     <div className="w-full h-16 m-auto max-w-6xl grid grid-cols-4 px-2">
@@ -20,7 +20,7 @@ export const Header = ({ theme = 'light' }) => (
       </Link>
       <Link
         href="/apply"
-        className="group col-start-4 col-span-1"
+        className="hidden md:block group col-start-4 col-span-1"
       >
         <div className=" text-[#4A1A51] group-hover:text-[#183FF5] flex flex-row items-center justify-between px-2 py-4 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
           Get Involved <ArrowRight className="h-8" />

@@ -1,3 +1,4 @@
+import { Text } from "@/components/common";
 import { Page } from "@/components/common/page";
 import { BlockContent } from "@/components/misc/portable-text";
 import Section from "@/components/misc/section";
@@ -45,9 +46,13 @@ export default async function ArticlePage(props: any) {
               </div>
             </Link>
           </div>
-          <h1 className="pb-16 max-w-6xl text-[#4A1A51] text-center font-instrument tracking-[-0.01em] text-7xl leading-[1.1]">
+          <Text font="serif" as="h1" scale="h2" className="px-2 pb-16 text-center tracking-[-0.01em] leading-[1.1] font-normal">
+                        Meet our four pillars that don’t just guide us — they define us,
+                        they’re the gears of our operating system.
+          </Text>
+          {/* <h1 className="pb-16 max-w-6xl text-[#4A1A51] text-center font-instrument tracking-[-0.01em] text-7xl leading-[1.1]">
             {post.title}
-          </h1>
+          </h1> */}
           <Image
             className="w-full aspect-[16/9] object-cover"
             src={urlFor(post.mainImage).url()}

@@ -310,7 +310,7 @@ export const HeroV3 = ({
         </Text>
       )}
       <div className="mt-32 grid grid-cols-4">
-        <p className="mix-blend-color-burn drop-shadow-xs text-zinc-500 pl-2 font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2] col-start-3 col-span-2">
+        <p className="mix-blend-color-burn drop-shadow-xs text-zinc-500 pl-2 font-schibsted font-semibold tracking-[-0.04em] text-sm leading-[1.2] col-start-1 col-span-3 md:col-start-3 md:col-span-2 ">
           Supporting ideas that harness the revolutionary power of tech to
           capture new frontiers in healthcare, and enhance the quality of human
           life.

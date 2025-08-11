@@ -58,7 +58,7 @@ export default function Home() {
           <Image
             alt="dheeraj quote"
             className="p-8 md:p-8 lg:p-12 xl:p-16"
-            src="/dheeraj-quote.png"
+            src="/dheeraj-quote-02.png"
             width={3368}
             height={2217}
           />
@@ -106,7 +106,7 @@ export default function Home() {
             </Text>
           </div> */}
         </div>
-        <div className="mt-16 grid grid-cols-4">
+        <div className="mt-8 md:mt-16 lg:mt-16 xl:mt-16 grid grid-cols-4">
           <Link
             href="/about"
             className="group col-start-1 col-span-2 md:col-start-3 md:col-span-1 bg-white"
@@ -125,18 +125,18 @@ export default function Home() {
           <Text
             as="h2"
             scale="h3"
-            className="pl-2 pr-8 pt-8 md:pt-16 lg:pt-24 xl:pt-32 text-pretty"
+            className="pl-2 pr-8 pt-16 md:pt-16 lg:pt-24 xl:pt-32 text-pretty"
             // className="px-2 py-64 text-[#4A1A51] font-schibsted font-semibold tracking-[-0.04em] text-6xl leading-[1.1]"
           >
             Building global research partnerships that harmonize science, scientists, and innovation to advance human health.
 
           </Text>
-          <div className="pt-4 md:pt-4 lg:pt-8 xl:pt-16 grid grid-cols-4">
+          <div className="py-4 md:py-4 lg:py-8 xl:py-16 grid grid-cols-4">
             <Link
               href="/work"
-              className="group col-start-1 col-span-1 bg-white"
+              className="group col-start-1 col-span-2 md:col-start-3 md:col-span-1 bg-white"
             >
-              <div className=" text-[#4A1A51] group-hover:text-[#183FF5] flex flex-row items-center justify-between px-2 py-4 border-l border-l-zinc-500/20 border-y border-y-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
+              <div className=" text-[#4A1A51] group-hover:text-[#183FF5] flex flex-row items-center justify-between px-2 py-4 border-x border-x-[0.5px] border-x-zinc-500/20 border-y border-y-zinc-500/20 underline underline-offset-2 font-schibsted font-semibold tracking-[-0.04em] text-regular leading-[1.2] w-full">
                 <>
                   What we do <ArrowRight className="h-8 mr-4" />
                 </>
@@ -152,6 +152,7 @@ export default function Home() {
                     <Image
                       className="grayscale"
                       alt="logo"
+                      unoptimized
                       src={o.src}
                       height={120}
                       width={160}
