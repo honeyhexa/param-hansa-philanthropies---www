@@ -1,38 +1,42 @@
 {
-  "name": "param-hansa-philanthropies---www",
+  "name": "php---www",
   "version": "0.1.0",
-  "private": false,
-  "license": "MIT",
-  "author": {
-    "name": "Arth K. Gajjar",
-    "email": "iarthstar@gmail.com",
-    "url": "https://github.com/iarthstar"
-  },
+  "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
+    "build:clean": "rm -rf .next; next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.0.0",
-    "next": "13.5.6",
-    "react": "^18",
-    "react-dom": "^18",
-    "sass": "^1.69.5",
-    "swiper": "^11.0.3",
-    "tailwind-merge": "^1.14.0"
+    "@sanity/icons": "^3.7.0",
+    "@sanity/image-url": "^1.1.0",
+    "@sanity/vision": "^3.86.1",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.487.0",
+    "motion": "^12.15.0",
+    "next": "15.3.0",
+    "next-sanity": "^9.10.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-medium-image-zoom": "^5.2.14",
+    "react-use-measure": "^2.1.7",
+    "sanity": "^3.86.1",
+    "sass": "^1.86.3",
+    "styled-components": "^6.1.17",
+    "tailwind-merge": "^3.2.0"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.4.16",
-    "eslint": "^8",
-    "eslint-config-next": "13.5.6",
-    "postcss": "^8.4.31",
-    "tailwindcss": "^3.3.5",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.0",
+    "tailwindcss": "^4",
     "typescript": "^5"
   }
 }
